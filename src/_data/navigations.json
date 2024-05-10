@@ -1,0 +1,18 @@
+{
+    "header": [
+        {
+            "title": "Webmaster",
+            "href": "/webmaster/"
+        },
+        {
+            "title": "Blog",
+            "href": "/blog/"
+        }
+    ],
+    "footer": [
+        {
+            "title": "Accessibility",
+            "href": "/accessibility/"
+        }
+    ]
+}

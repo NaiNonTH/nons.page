@@ -1,0 +1,41 @@
+---
+title: Blog Index
+layout: "Main.njk"
+styles:
+  - blogIndex
+pagination:
+  data: collections.post
+  reverse: true
+  size: 12
+permalink: "/blog/{{ '' if pagination.pageNumber === 0 else pagination.pageNumber + 1 }}/"
+---
+
+<section aria-labelledby="blog" id="index">
+    <h1 id="blog">
+        Blog
+        <span class="pageNumber">
+            {{ pagination.pageNumber + 1 }}<span class="total">/{{ pagination.items.length }}
+        </span>
+    </span>
+    </h1>
+    {% if pagination.href.previous %}
+        <div class="previous">
+            <a class="btn" href="{{ pagination.href.previous }}">Previous</a>
+        </div>
+    {% endif %}
+    {% for post in pagination.items %}
+        <a href="{{ post.url }}">
+            <article>
+                <h2>
+                    {{ post.data.title }}
+                </h2>
+                <i>Posted on <time datetime="{{ post.date | formatDateSlug }}">{{ post.date | formatDate }}</time></i>
+            </article>
+        </a>
+    {% endfor %}
+    {% if pagination.href.next %}
+        <div class="next">
+            <a class="btn" href="{{ pagination.href.next }}">Next</a>
+        </div>
+    {% endif %}
+</section>

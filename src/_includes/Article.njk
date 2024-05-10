@@ -1,0 +1,14 @@
+---
+styles:
+  - article
+---
+
+{% extends "Base.njk" %}
+{% block main %}
+    <article class="post-content">
+        <h1>{{ title }}</h1>
+        <i>{{ timeDescription }} <time datetime="{{ page.date | formatDateSlug }}">{{ page.date | formatDate }}</time></i>
+        <hr>
+        {{ content | safe }}
+    </article>
+{% endblock %}

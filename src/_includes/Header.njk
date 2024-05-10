@@ -1,0 +1,15 @@
+<header>
+    <nav>
+        <a aria-current="{{ page.url == "/" }}" class="avatar" title="Home" href="/">
+            <picture>
+                <source srcset="/assets/images/avatar.webp" type="image/webp">
+                <img width="135" height="135" src="/assets/images/avatar.jpg" alt="Avatar">
+            </picture>
+        </a>
+        <ul>
+            {% for navigation in navigations.header %}
+                <li><a aria-current="{{ page.url.startsWith(navigation.href) }}" href="{{ navigation.href }}">{{ navigation.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+</header>

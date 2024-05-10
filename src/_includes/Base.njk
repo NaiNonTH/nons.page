@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% for meta in metas %}
+        {{ meta | safe }}
+    {% endfor %}
+    <link rel="shortcut icon" href="/assets/images/avatar.webp" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    {% for style in styles %}
+        <link rel="stylesheet" href="/assets/styles/{{ style }}.css">
+    {% endfor %}
+    <title>{{ title if page.url === "/" else title + " | NaiNonTheN00b1" }}</title>
+</head>
+<body>
+    {% include "Header.njk" %}
+    <main>
+        {% block main %}{% endblock %}
+    </main>
+    {% include "Footer.njk" %}
+</body>
+</html>

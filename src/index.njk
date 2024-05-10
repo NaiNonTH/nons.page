@@ -1,0 +1,32 @@
+---
+title: NaiNonTheN00b1
+styles:
+  - index
+layout: "Main.njk"
+---
+
+<section aria-label="Greetings">
+    <h1 id="hello-world">Hello, world!</h1>
+    <p>I'm NaiNonTheN00b1, and welcome to my <del>200th</del> personal website! Here, you will find my about me, some projects I made, and probably some blog posts.</p>
+</section>
+<section aria-label="About Me (Briefly)">
+    <picture>
+        <source srcset="/assets/images/avatar.webp" type="image/webp">
+        <img width="135" height="135" src="/assets/images/avatar.jpg" alt="Avatar">
+    </picture>
+    <span>NaiNonTheN00b1</span>
+    <a class="btn hero" href="/webmaster/">About Me</a>
+</section>
+<section aria-labelledby="latest-post">
+    {% set latestPost = collections.post[0] %}
+    <h2 id="latest-post">Latest Post</h2>
+    <a href={{ latestPost.url }}>
+        <article>
+            <h3>{{ latestPost.data.title }}</h3>
+            <picture>
+                <source srcset="{{ latestPost.url + 'thumbnail.webp' }}" type="image/webp">
+                <img src="{{ latestPost.url + 'thumbnail.jpg' }}" alt="Latest Post Thumbnail">
+            </picture>
+        </article>
+    </a>
+</section>

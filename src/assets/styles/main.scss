@@ -1,0 +1,209 @@
+@use "mixins" as *;
+
+:root {
+    // --box: 255, 255, 255;
+    // --base: 240, 240, 255;
+    // --base-accent: 250, 250, 255;
+    // --prominence: 0, 0, 66;
+    --box: 255, 255, 255;
+    --base: 250, 234, 215;
+    --base-accent: 255, 244, 230;
+    --prominence: 39, 28, 9;
+
+    --box-shadow-md:
+        0 2px 3px rgba(0, 0, 0, 0.2),
+        0 5px 7px rgba(0, 0, 0, 0.2);
+    --box-shadow-lg:
+        0 3px 7px rgba(0, 0, 0, 0.1),
+        0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.125em;
+    background: rgb(var(--base));
+}
+body {
+    margin: 0;
+    min-width: 20rem;
+}
+header {
+    --top-offset: 2rem;
+
+    margin-top: var(--top-offset);
+    @extend %scheme-dark;
+}
+header::before {
+    content: "";
+    @extend %absolute;
+    top: calc(var(--top-offset) * -1);
+    inset-inline: 0;
+    height: var(--top-offset);
+    background: rgba(var(--base), 0.5);
+
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+header nav {
+    @extend %site-wrapper;
+    --avatar-size: 100px;
+
+    ul {
+        @extend %navigations;
+        margin-left: calc(var(--avatar-size) + 2rem);
+        overflow: auto hidden;
+    }
+    a:not(.avatar) {
+        @extend %navigations-anchors;
+    }
+    a:not(.avatar):is(:hover, [aria-current="true"]) {
+        @extend %scheme-light;
+    }
+}
+.avatar {
+    @extend %absolute;
+    top: 50%;
+    left: 1rem;
+    z-index: 1;
+    transform: translateY(-50%);
+
+    &:hover img {
+        filter: brightness(1.35);
+    }
+    &[aria-current="true"] img {
+        box-shadow: 
+            0 0 0 2px rgb(var(--base)),
+            0 0 0 10px rgb(var(--prominence));
+    }
+    img {
+        width: var(--avatar-size);
+        height: var(--avatar-size);
+        border-radius: 50%;
+        box-shadow: 0 0 0 10px rgb(var(--prominence));
+    
+        transition: filter 0.2s;
+        will-change: filter;
+    }
+}
+main {
+    @extend %site-wrapper;
+    @extend %scheme-light;
+    padding: 3rem 1.5rem;
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(12, 1fr);
+}
+footer {
+    > div {
+        @extend %site-wrapper;
+        background: rgb(var(--box));
+        color: rgb(var(--prominence));
+        padding: 0 1rem;
+        overflow-x: auto;
+
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: space-between;
+        white-space: nowrap;
+    }
+    nav ul {
+        @extend %navigations;
+
+        a {
+            @extend %navigations-anchors;
+
+            &:hover {
+                background: rgb(var(--prominence));
+                color: rgb(var(--box));
+            }
+        }
+    }
+}
+p, ul, ol {
+    line-height: 1.5em;
+}
+:is(p, ul, ol):last-child {
+    margin-bottom: 0;
+}
+button {
+    font: inherit;
+}
+button,
+a.btn {
+    border-radius: 10px;
+    padding: 0.5em 1em;
+
+    @extend %scheme-dark;
+    text-decoration: none;
+
+    transition: box-shadow 0.2s;
+    will-change: box-shadow;
+
+    &:hover {
+        box-shadow: var(--box-shadow-md);
+    }
+}
+:is(h1, h2, h3, h4, h5, h6):first-child {
+    margin-top: 0;
+}
+hr {
+    border: none;
+    height: 1px;
+    background: currentColor;
+}
+
+@media (max-width: 56.25em) {
+    header {
+        --top-offset: 0;
+    }
+    header::before {
+        content: unset;
+    }
+    header nav {
+        --avatar-size: 80px;
+    }
+    main {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+    }
+    .avatar {
+        top: 5px;
+        transform: none;
+    }
+    .avatar img {
+        box-shadow: 0 0 0 8px rgb(var(--prominence));
+    }
+}
+@media (max-height: 36rem) {
+    header {
+        --top-offset: 0;
+    }
+    header::before {
+        content: unset;
+    }
+    nav {
+        --avatar-size: 80px;
+    }
+    .avatar {
+        top: 5px;
+        transform: none;
+    }
+    .avatar img {
+        box-shadow: 0 0 0 8px rgb(var(--prominence));
+    }
+}
+@media (prefers-reduced-motion) {
+    * {
+        transition-duration: 0s !important;
+    }
+}

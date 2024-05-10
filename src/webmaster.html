@@ -1,0 +1,83 @@
+---
+title: About Me
+layout: "Main.njk"
+styles:
+  - webmaster
+---
+
+<section aria-labelledby="about-me">
+    <h1 id="about-me">About Me</h1>
+    <article>
+        <picture>
+            <source srcset="/assets/images/avatar.webp" type="image/webp">
+            <img width="120" height="120" src="/assets/images/avatar.jpg" alt="Avatar">
+        </picture>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Nickname:</th>
+                    <td>Non</td>
+                </tr>
+                <tr>
+                    <th>Title:</th>
+                    <td>NaiNonTheN00b1</td>
+                </tr>
+                <tr>
+                    <th>Birthday:</th>
+                    <td>21st March</td>
+                </tr>
+                <tr>
+                    <th>Pronouns</th>
+                    <td>He/Him</td>
+                </tr>
+                <tr>
+                    <th>MDNI:</th>
+                    <td>ISFP-A</td>
+                </tr>
+                <tr>
+                    <th>Nationality:</th>
+                    <td>Thai 🇹🇭</td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+</section>
+<section aria-label="Links">
+    {% for social in socials %}
+        <a target="_blank" title="{{ social.title }}" style="--branding: {{ social.branding }}" href="{{ social.href }}">
+            <img src="{{ social.logo }}" draggable="false" width="32" height="32" alt="{{ social.title }}">
+        </a>
+    {% endfor %}
+</section>
+<section aria-labelledby="likes">
+    <h2 id="likes">Likes</h2>
+    <p><em>I don't know, actually.</em></p>
+</section>
+<section aria-labelledby="uses">
+    <h2 id="uses">Uses</h2>
+    <table>
+        <tbody>
+            <tr>
+                <th>Browsers:</th>
+                <td><a href="https://vivaldi.com">Vivaldi</a></td>
+            </tr>
+            <tr>
+                <th>Code Editor:</th>
+                <td><a href="https://code.visualstudio.com">Visual Studio Code</a></td>
+            </tr>
+            <tr>
+                <th>OS:</th>
+                <td>Windows 11<br>(wanna try out Linux, though)</td>
+            </tr>
+            <tr>
+                <th>Search Engine:</th>
+                <td>Google or <a href="https://startpage.com">Startpage</a></td>
+            </tr>
+            <tr>
+                <th>E-mail Service:</th>
+                <td>Gmail<br>(ProtonMail planned)</td>
+            </tr>
+        </tbody>
+    </table>
+    <p style="color: lightgray; text-align: right;">&lt;!-- dunno what to add more --&gt;</p>
+</section>
