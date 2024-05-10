@@ -5,7 +5,7 @@ styles:
   - webmaster
 ---
 
-<section aria-labelledby="about-me">
+<section id="s-1" aria-labelledby="about-me">
     <h1 id="about-me">About Me</h1>
     <article>
         <picture>
@@ -42,18 +42,18 @@ styles:
         </table>
     </article>
 </section>
-<section aria-label="Links">
+<section id="s-2" aria-label="Links">
     {% for social in socials %}
         <a class="not-text" target="_blank" title="{{ social.title }}" style="--branding: {{ social.branding }}" href="{{ social.href }}">
             <img src="{{ social.logo }}" draggable="false" width="32" height="32" alt="{{ social.title }}">
         </a>
     {% endfor %}
 </section>
-<section aria-labelledby="likes">
+<section id="s-3" aria-labelledby="likes">
     <h2 id="likes">Likes</h2>
     <p><em>I don't know, actually.</em></p>
 </section>
-<section aria-labelledby="uses">
+<section id="s-4" aria-labelledby="uses">
     <h2 id="uses">Uses</h2>
     <table>
         <tbody>
