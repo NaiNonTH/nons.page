@@ -9,10 +9,10 @@ layout: "Main.njk"
     <h1 id="hello-world">Hello, world!</h1>
     <p>I'm NaiNonTheN00b1, and welcome to my <del>200th</del> personal website! Here, you will find my about me, some projects I made, and probably some blog posts.</p>
 </section>
-<section aria-label="About Me (Briefly)">
+<section aria-label="About Me">
     <picture>
         <source srcset="/assets/images/avatar.webp" type="image/webp">
-        <img width="135" height="135" src="/assets/images/avatar.jpg" alt="Avatar">
+        <img width="135" height="135" src="/assets/images/avatar.jpg" alt="The Webmaster's Avatar">
     </picture>
     <span>NaiNonTheN00b1</span>
     <a class="btn hero" href="/webmaster/">About Me</a>
@@ -25,7 +25,7 @@ layout: "Main.njk"
             <h3>{{ latestPost.data.title }}</h3>
             <picture>
                 <source srcset="{{ latestPost.url + 'thumbnail.webp' }}" type="image/webp">
-                <img src="{{ latestPost.url + 'thumbnail.jpg' }}" alt="Latest Post Thumbnail">
+                <img src="{{ latestPost.url + 'thumbnail.jpg' }}" alt="A Thumbnail for Latest Post: {{ latestPost.data.title }}">
             </picture>
         </article>
     </a>
