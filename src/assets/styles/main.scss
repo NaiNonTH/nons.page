@@ -9,6 +9,7 @@
     --base: 250, 234, 215;
     --base-accent: 255, 244, 230;
     --prominence: 39, 28, 9;
+    --hyperlinked: 4, 0, 218;
 
     --box-shadow-md:
         0 2px 3px rgba(0, 0, 0, 0.2),
@@ -57,12 +58,13 @@ header nav {
         @extend %navigations;
         margin-left: calc(var(--avatar-size) + 2rem);
         overflow: auto hidden;
-    }
-    a:not(.avatar) {
-        @extend %navigations-anchors;
-    }
-    a:not(.avatar):is(:hover, [aria-current="true"]) {
-        @extend %scheme-light;
+
+        a {
+            @extend %navigations-anchors;
+        }
+        a:is(:hover, [aria-current="true"]) {
+            @extend %scheme-light;
+        }
     }
 }
 .avatar {
@@ -127,11 +129,27 @@ footer {
         }
     }
 }
+a,
+abbr[title] {
+    text-decoration: none;
+}
+a:not(nav a, .btn) {
+    color: rgb(var(--hyperlinked));
+    border-bottom: 1px solid;
+
+    &:hover {
+        border-bottom-style: dotted;
+    }
+}
 p, ul, ol {
     line-height: 1.5em;
 }
 :is(p, ul, ol):last-child {
     margin-bottom: 0;
+}
+abbr[title] {
+    cursor: help;
+    border-bottom: 1px dashed;
 }
 button {
     font: inherit;
@@ -142,7 +160,6 @@ a.btn {
     padding: 0.5em 1em;
 
     @extend %scheme-dark;
-    text-decoration: none;
 
     transition: box-shadow 0.2s;
     will-change: box-shadow;
