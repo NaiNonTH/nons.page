@@ -20,7 +20,7 @@ layout: "Main.njk"
 <section aria-labelledby="latest-post">
     {% set latestPost = collections.post[0] %}
     <h2 id="latest-post">Latest Post</h2>
-    <a href={{ latestPost.url }}>
+    <a class="not-text" href={{ latestPost.url }}>
         <article>
             <h3>{{ latestPost.data.title }}</h3>
             <picture>
