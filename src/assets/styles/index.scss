@@ -48,6 +48,10 @@ main section {
         a {
             display: contents;
             color: inherit;
+            
+            &:hover picture {
+                filter: brightness(1.2);
+            }
         }
         h2, h3 {
             left: 0;
@@ -86,9 +90,6 @@ main section {
             transition: filter 0.2s;
             will-change: filter;
 
-            &:hover {
-                filter: brightness(1.2);
-            }
             img {
                 width: 100%;
                 height: 100%;
