@@ -102,19 +102,18 @@ main {
     grid-template-columns: repeat(12, 1fr);
 }
 footer {
-    > div {
-        @extend %site-wrapper;
-        background: rgb(var(--box));
-        color: rgb(var(--prominence));
-        padding: 0 1rem;
-        overflow-x: auto;
+    @extend %site-wrapper;
+    background: rgb(var(--box));
+    color: rgb(var(--prominence));
+    padding: 0 1rem;
+    overflow-x: auto;
 
-        display: flex;
-        gap: 1rem;
-        align-items: center;
-        justify-content: space-between;
-        white-space: nowrap;
-    }
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    
     nav ul {
         @extend %navigations;
 

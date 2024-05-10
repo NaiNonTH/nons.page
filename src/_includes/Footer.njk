@@ -1,14 +1,12 @@
 <footer>
     <div>
-        <div>
-            <strong>NaiNonTheN00b1</strong> - Since 2024
-        </div>
-        <nav>
-            <ul>
-                {% for navigation in navigations.footer %}
-                    <li><a href="{{ navigation.href }}">{{ navigation.title }}</a></li>
-                {% endfor %}
-            </ul>
-        </nav>
+        <strong>NaiNonTheN00b1</strong> - Since 2024
     </div>
+    <nav>
+        <ul>
+            {% for navigation in navigations.footer %}
+                <li><a href="{{ navigation.href }}">{{ navigation.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
 </footer>
