@@ -17,6 +17,10 @@
         {
             "title": "Credits",
             "href": "/credits/"
+        },
+        {
+            "title": "Repository",
+            "href": "https://github.com/NaiNonTH/site"
         }
     ]
 }
