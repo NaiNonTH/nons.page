@@ -1,5 +1,5 @@
 ---
-title: About Me
+title: Webmaster
 layout: "Main.njk"
 styles:
   - webmaster
@@ -20,7 +20,7 @@ styles:
                 </tr>
                 <tr>
                     <th>Title:</th>
-                    <td>NaiNonTheN00b1</td>
+                    <td>NaiNon&shy;TheN00b1</td>
                 </tr>
                 <tr>
                     <th>Birthday:</th>
@@ -44,7 +44,7 @@ styles:
 </section>
 <section aria-label="Links">
     {% for social in socials %}
-        <a target="_blank" title="{{ social.title }}" style="--branding: {{ social.branding }}" href="{{ social.href }}">
+        <a class="not-text" target="_blank" title="{{ social.title }}" style="--branding: {{ social.branding }}" href="{{ social.href }}">
             <img src="{{ social.logo }}" draggable="false" width="32" height="32" alt="{{ social.title }}">
         </a>
     {% endfor %}
