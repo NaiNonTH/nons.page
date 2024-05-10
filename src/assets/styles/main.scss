@@ -39,17 +39,6 @@ header {
     margin-top: var(--top-offset);
     @extend %scheme-dark;
 }
-header::before {
-    content: "";
-    @extend %absolute;
-    top: calc(var(--top-offset) * -1);
-    inset-inline: 0;
-    height: var(--top-offset);
-    background: rgba(var(--base), 0.5);
-
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-}
 header nav {
     @extend %site-wrapper;
     --avatar-size: 100px;
@@ -177,38 +166,16 @@ hr {
     background: currentColor;
 }
 
-@media (max-width: 56.25em) {
+@media (max-width: 56.25em) or (max-height: 36rem) {
     header {
         --top-offset: 0;
-    }
-    header::before {
-        content: unset;
     }
     header nav {
         --avatar-size: 80px;
     }
     main {
         display: flex;
-        gap: 1rem;
         flex-direction: column;
-    }
-    .avatar {
-        top: 5px;
-        transform: none;
-    }
-    .avatar img {
-        box-shadow: 0 0 0 8px rgb(var(--prominence));
-    }
-}
-@media (max-height: 36rem) {
-    header {
-        --top-offset: 0;
-    }
-    header::before {
-        content: unset;
-    }
-    nav {
-        --avatar-size: 80px;
     }
     .avatar {
         top: 5px;
