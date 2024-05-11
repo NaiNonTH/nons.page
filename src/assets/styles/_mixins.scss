@@ -4,16 +4,16 @@
     max-width: 56.25rem;
 }
 %scheme-light {
-    color: rgb(var(--prominence));
     background: rgb(var(--base-accent));
+    color: rgb(var(--fg-base));
 }
 %scheme-light-contrast {
-    color: rgb(var(--prominence));
     background: rgb(var(--box));
+    color: rgb(var(--fg-base));
 }
 %scheme-dark {
     background: rgb(var(--prominence));
-    color: rgb(var(--base));
+    color: rgb(var(--fg-prominence));
 }
 %section-box {
     @extend %scheme-light-contrast;
