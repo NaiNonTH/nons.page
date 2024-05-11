@@ -1,0 +1,26 @@
+@use "mixins" as *;
+
+section {
+    grid-column: 2 / span 10;
+}
+article {
+    @extend %scheme-light-contrast;
+    border-bottom: 2px solid rgb(var(--base));
+    padding: 1rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    h2 {
+        margin-bottom: 0.5rem;
+    }
+    ul {
+        list-style: none;
+    }
+    * {
+        padding: 0;
+        margin: 0;
+    }
+}

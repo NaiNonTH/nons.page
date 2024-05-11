@@ -17,7 +17,15 @@ layout: "Main.njk"
     <span>NaiNonTheN00b1</span>
     <a class="btn" href="/webmaster/">About Me</a>
 </section>
-<section id="s-3" aria-labelledby="latest-post">
+<section id="s-3" aria-labelledby="projects">
+    <h2 id="projects">Projects</h2>
+    <nav>
+        <ul>
+            <li><a class="btn" href="/minecraft/">Minecraft</a></li>
+        </ul>
+    </nav>
+</section>
+<section id="s-4" aria-labelledby="latest-post">
     {% set latestPost = collections.post[0] %}
     <h2 id="latest-post">Latest Post</h2>
     <a class="not-text" href={{ latestPost.url }}>

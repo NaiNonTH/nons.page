@@ -1,0 +1,110 @@
+[
+    {
+        "name": "Bushy Leaves for Faithful 32x",
+        "description": "Bushier Leaves for Faithful 32x for Everyone",
+        "links": {
+            "Faithful": "https://faithfulpack.net/addons/BushyLeaves",
+            "Modrinth": "https://modrinth.com/resourcepack/bushy-leaves-for-faithful-32x",
+            "CurseForge": "https://www.curseforge.com/minecraft/texture-packs/bushy-leaves-for-faithful-32x"
+        }
+    },
+    {
+        "name": "Foliage+",
+        "description": "Makes Foliage Better",
+        "links": {
+            "Modrinth": "https://modrinth.com/resourcepack/foliage+",
+            "CurseForge": "https://www.curseforge.com/minecraft/texture-packs/foliage-plus"
+        }
+    },
+    {
+        "name": "Foliage+ Tweaks",
+        "description": "Vivifies the Minecraft World — more features to Minecraft.",
+        "links": {
+            "Modrinth": "https://modrinth.com/resourcepack/foliage+-tweaks"
+        }
+    },
+    {
+        "name": "Block Hitboxes Indicator",
+        "description": "Do with Accuracy",
+        "links": {
+            "Modrinth": "https://modrinth.com/resourcepack/bhi"
+        }
+    },
+    {
+        "name": "Improved Fences",
+        "description": "Improved Minecraft Fences",
+        "links": {
+            "Modrinth": "https://modrinth.com/resourcepack/improved-fences"
+        }
+    },
+    {
+        "name": "Simply Bushier",
+        "description": "Vanilla-like Bushy Leaves",
+        "links": {
+            "Modrinth": "https://modrinth.com/resourcepack/simply-bushier"
+        }
+    },
+    {
+        "name": "Foliage+ Lite",
+        "description": "A Basic Version of Foliage+",
+        "links": {
+            "Modrinth": "https://modrinth.com/resourcepack/foliage+-lite"
+        }
+    },
+    {
+        "name": "Sign+ [For EBE]",
+        "description": "Beautified Signs for EBE (Enhanced Block Entities mod)",
+        "links": {
+            "Modrinth": "https://modrinth.com/resourcepack/sign+"
+        }
+    },
+    {
+        "name": "Cobweb+",
+        "description": "Makes Cobwebs SpoOoOkier",
+        "links": {
+            "Planet Minecraft": "https://www.planetminecraft.com/texture-pack/cobweb-v1-0-1-14-1-18/"
+        }
+    },
+    {
+        "name": "Japanese Sliding Door",
+        "description": "*well, it slides...*",
+        "links": {
+            "Planet Minecraft": "https://www.planetminecraft.com/texture-pack/japanese-sliding-door/"
+        }
+    },
+    {
+        "name": "Herobrine Return",
+        "description": "....................................",
+        "links": {
+            "Planet Minecraft": "https://www.planetminecraft.com/texture-pack/herobrine-return-5353071/"
+        }
+    },
+    {
+        "name": "Atmogus",
+        "description": "*when the cloud is sus*",
+        "links": {
+            "Planet Minecraft": "https://www.planetminecraft.com/texture-pack/amogus-clouds-v1-0/"
+        }
+    },
+    {
+        "name": "OptiFineTH",
+        "description": "Provides Thai Localization to OptiFine",
+        "links": {
+            "Planet Minecraft": "https://www.planetminecraft.com/texture-pack/optifineth-v1-0/"
+        }
+    },
+    {
+        "name": "ASCII HD",
+        "description": "HD Minecraft Font",
+        "links": {
+            "Planet Minecraft": "https://www.planetminecraft.com/texture-pack/ascii-hd-v1-0/"
+        }
+    },
+    {
+        "name": "Before Isekai",
+        "description": "Rest in Peace, Kelanduo",
+        "links": {
+            "Planet Minecraft": "https://www.planetminecraft.com/texture-pack/before-isekai/"
+        }
+    }
+]

@@ -1,0 +1,25 @@
+---
+title: Minecraft
+layout: "Main.njk"
+styles:
+  - minecraft
+---
+
+<section>
+    <h1>Minecraft</h1>
+    <p>Here is a collection of all Minecraft-related projects that I've made, like Resource Packs and Data Packs.</p>
+    <hr>
+    {% for project in minecraft %}
+        <article>
+            <div>
+                <h2>{{ project.name }}</h2>
+                <p>{{ project.description }}</p>
+            </div>
+            <ul>
+                {% for linkTitle, linkHref in project.links %}
+                    <li><a href="{{ linkHref }}">{{ linkTitle }}</a></li>
+                {% endfor %}
+            </ul>
+        </article>
+    {% endfor %}
+</section>
