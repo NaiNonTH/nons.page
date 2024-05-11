@@ -6,18 +6,16 @@ layout: "Main.njk"
 ---
 
 <section id="s-1" aria-label="Greetings">
-    <h1 id="hello-world">Hello, world!</h1>
-    <p>I'm NaiNonTheN00b1, and welcome to my <del>200th</del> personal website! Here, you will find my about me, some projects I made, and probably some blog posts.</p>
-</section>
-<section id="s-2" aria-label="About Me">
     <picture>
         <source srcset="/assets/images/avatar.webp" type="image/webp">
         <img width="135" height="135" src="/assets/images/avatar.jpg" alt="The Webmaster's Avatar">
     </picture>
-    <span>NaiNonTheN00b1</span>
-    <a class="btn" href="/webmaster/">About Me</a>
+    <div>
+        <h1 id="hello-world">Hello, world!</h1>
+        <p><strong>I'm NaiNonTheN00b1</strong>, and welcome to my <del>200th</del> personal website! Here, you will find my about me, some projects I made, and probably some blog posts.</p>
+    </div>
 </section>
-<section id="s-3" aria-labelledby="projects">
+<section id="s-2" aria-labelledby="projects">
     <h2 id="projects">Projects</h2>
     <nav>
         <ul>
@@ -25,7 +23,7 @@ layout: "Main.njk"
         </ul>
     </nav>
 </section>
-<section id="s-4" aria-labelledby="latest-post">
+<section id="s-3" aria-labelledby="latest-post">
     {% set latestPost = collections.post[0] %}
     <h2 id="latest-post">Latest Post</h2>
     <a class="not-text" href={{ latestPost.url }}>
