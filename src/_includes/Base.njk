@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noai">
     <meta name="robots" content="noimageai">
+    {% if thumbnail %}
+        <meta name="og:image" content="{{ page.url }}{{ thumbnail }}">
+    {% endif %}
     {% for metaName, metaContent in metas %}
         <meta name="{{ metaName }}" content="{{ metaContent }}">
     {% endfor %}
