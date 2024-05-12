@@ -19,5 +19,9 @@
         {% block main %}{% endblock %}
     </main>
     {% include "Footer.njk" %}
+    <script src="/assets/scripts/main.js"></script>
+    {% for script in scripts %}
+        <script src="/assets/scripts/{{ script }}.js"></script>
+    {% endfor %}
 </body>
 </html>

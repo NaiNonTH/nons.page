@@ -25,7 +25,7 @@ The lowest Contrast Ratio for text you will find on this website is **9.58:1** (
 
 ## JavaScript
 
-*As of now,* JavaScript is still not being utilized. However, it is **planned** to be used for additional features.
+JavaScript is additionally used for site configuration, such as Themes and Accessibility. The website will still work well without JavaScript.
 
 ## Device Compatibility
 
