@@ -2,10 +2,10 @@
     let preferences = localStorage.getItem("preferences");
     if (!preferences) return;
     
-    preferences = JSON.parse(preferences);
+    const { theme, tritanopia } = JSON.parse(preferences);
     
     const html = document.documentElement;
 
-    html.setAttribute("theme", preferences.theme || "broken-hoe");
-    preferences.tritanopia && html.setAttribute("tritanopia", "");
+    html.setAttribute("theme", theme);
+    tritanopia && html.setAttribute("tritanopia", "");
 })();
