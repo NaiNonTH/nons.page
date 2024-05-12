@@ -5,7 +5,7 @@ styles:
 
 {% extends "Base.njk" %}
 {% block main %}
-    <article class="post-content">
+    <article>
         <h1>{{ title }}</h1>
         <i>{{ timeDescription }} <time datetime="{{ page.date | formatDateSlug }}">{{ page.date | formatDate }}</time></i>
         <hr>
