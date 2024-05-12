@@ -1,11 +1,9 @@
 (function() {
     let preferences = localStorage.getItem("preferences");
     if (!preferences) return;
-    
-    const { theme, tritanopia } = JSON.parse(preferences);
-    
-    const html = document.documentElement;
+    else preferences = JSON.parse(preferences);
 
-    theme && html.setAttribute("theme", theme);
-    tritanopia && html.setAttribute("tritanopia", "");
+    for (let props in preferences) {
+        document.documentElement.setAttribute(props, preferences[props]);
+    }
 })();
