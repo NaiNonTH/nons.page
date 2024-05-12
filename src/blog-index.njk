@@ -14,9 +14,8 @@ permalink: "/blog/{{ '' if pagination.pageNumber === 0 else pagination.pageNumbe
     <h1 id="blog">
         Blog
         <span class="pageNumber">
-            {{ pagination.pageNumber + 1 }}<span class="total">/{{ pagination.items.length }}
+            {{ pagination.pageNumber + 1 }}<span class="total">/{{ pagination.items.length }}</span>
         </span>
-    </span>
     </h1>
     {% if pagination.href.previous %}
         <div class="previous">
