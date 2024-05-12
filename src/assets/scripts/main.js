@@ -6,6 +6,6 @@
     
     const html = document.documentElement;
 
-    html.setAttribute("theme", theme);
+    theme && html.setAttribute("theme", theme);
     tritanopia && html.setAttribute("tritanopia", "");
 })();
