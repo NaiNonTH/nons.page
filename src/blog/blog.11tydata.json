@@ -2,5 +2,8 @@
     "date": "Last Modified",
     "tags": "post",
     "layout": "Article.njk",
+    "metas": {
+        "author": "NaiNonTheN00b1"
+    },
     "timeDescription": "Posted on"
 }
