@@ -1,10 +1,7 @@
 @use "mixins" as *;
 
-:root {
-    // --box: 255, 255, 255;
-    // --base: 240, 240, 255;
-    // --base-accent: 250, 250, 255;
-    // --prominence: 0, 0, 66;
+:root,
+html[theme="broken-hoe"] {
     --box: 255, 255, 255;
     --base: 250, 234, 215;
     --base-accent: 255, 244, 230;
@@ -20,6 +17,15 @@
     --box-shadow-lg:
         0 3px 7px rgba(0, 0, 0, 0.1),
         0 10px 15px rgba(0, 0, 0, 0.2);
+}
+html[theme="navy"] {
+    --box: 255, 255, 255;
+    --base: 240, 240, 255;
+    --base-accent: 250, 250, 255;
+    --prominence: 0, 0, 66;
+}
+html[tritanopia] {
+    --hyperlinked: 255, 0, 205;
 }
 
 *,
@@ -145,6 +151,7 @@ abbr[title] {
 }
 button {
     font: inherit;
+    border: none;
 }
 button,
 a.btn {

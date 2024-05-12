@@ -1,0 +1,14 @@
+main > *:not(noscript) {
+    grid-column: span 3;
+}
+noscript {
+    font-size: 1.25em;
+    grid-column: 4 / span 8;
+}
+legend {
+    font-size: 1.125em;
+    font-weight: bold;
+}
+fieldset {
+    border: none;
+}
