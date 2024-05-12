@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="{{ description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% for meta in metas %}
-        {{ meta | safe }}
+    <meta name="robots" content="noai">
+    <meta name="robots" content="noimageai">
+    {% for metaName, metaContent in metas %}
+        <meta name="{{ metaName }}" content="{{ metaContent }}">
     {% endfor %}
     <link rel="shortcut icon" href="/assets/images/avatar.webp" type="image/x-icon">
     <link rel="stylesheet" href="/assets/styles/main.css">
