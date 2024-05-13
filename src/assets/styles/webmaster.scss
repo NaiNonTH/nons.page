@@ -56,6 +56,11 @@ section {
 }
 #s-4 {
     grid-column: 6 / span 6;
+
+    i {
+        float: right;
+        margin-top: 1rem;
+    }
 }
 table th {
     white-space: nowrap;
