@@ -18,7 +18,7 @@ This website contains **minimal** transition for each state of certain elements.
 
 ## Text Clarity
 
-The lowest Contrast Ratio for text you will find on this website is **9.58:1** (links), which gives a result of **AAA** in WCAG Compliance.
+The lowest Contrast Ratio between text and background you will find on this website is **7.75:1** (links), giving a result of **AAA** in WCAG Compliance. However, with Tritanopia Links enabled, the Contrast Ratio of those can go even lower, but it may contrast better with non-linked text if you have Tritanopia. So choose what fits you better.
 
 ## Flashing Images
 
