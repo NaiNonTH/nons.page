@@ -1,16 +1,18 @@
 @use "mixins" as *;
 
 #index,
-#pagination {
+#pagination,
+h1 {
     grid-column: 2 / span 10;
 }
+h1,
+#index div {
+    display: flex;
+}
+h1 {
+    justify-content: space-between;
+}
 #index {
-    div, h1 {
-        display: flex;
-    }
-    h1 {
-        justify-content: space-between;
-    }
     a:not(.btn) {
         position: relative;
         color: inherit;

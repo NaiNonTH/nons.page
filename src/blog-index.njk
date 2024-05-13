@@ -11,13 +11,13 @@ pagination:
 permalink: "/blog/{{ '' if pagination.pageNumber === 0 else pagination.pageNumber + 1 }}/"
 ---
 
+<h1 id="blog">
+    Blog
+    <span class="pageNumber">
+        {{ pagination.pageNumber + 1 }}<span class="total">/{{ pagination.items.length }}</span>
+    </span>
+</h1>
 <section aria-labelledby="blog" id="index">
-    <h1 id="blog">
-        Blog
-        <span class="pageNumber">
-            {{ pagination.pageNumber + 1 }}<span class="total">/{{ pagination.items.length }}</span>
-        </span>
-    </h1>
     {% if pagination.href.previous %}
         <div class="previous">
             <a class="btn" href="{{ pagination.href.previous }}">Previous</a>
