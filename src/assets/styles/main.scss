@@ -6,7 +6,7 @@ html[theme="broken-hoe"] {
     --base: 250, 234, 215;
     --base-accent: 255, 244, 230;
     --prominence: 39, 28, 9;
-    --hyperlinked: 4, 0, 218;
+    --hyperlinked: 42, 42, 223;
 
     --fg-prominence: var(--base);
     --fg-base: var(--prominence);
@@ -25,7 +25,7 @@ html[theme="navy"] {
     --prominence: 0, 0, 66;
 }
 html[tritanopia="true"] {
-    --hyperlinked: 255, 0, 205;
+    --hyperlinked: 223, 21, 169;
 }
 
 *,
