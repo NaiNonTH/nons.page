@@ -1,0 +1,74 @@
+---
+title: Links
+description: A collection of Websites and Articles that I've surfed and is my favorite.
+layout: "Main.njk"
+styles:
+  - links
+buttons:
+  - name: adilene
+    button: adilene.png
+    href: https://adilene.net
+  - name: allyratworld
+    button: allyratworld.png
+    href: https://allyratworld.com
+  - name: cinni
+    button: cinni.png
+    href: https://cinni.net
+  - name: dimden
+    button: dimden.gif
+    href: https://dimden.dev
+  - name: goblin-heart
+    button: goblin-heart.gif
+    href: https://goblin-heart.net
+  - name: goblin-heart (sadgrl)
+    button: sadgrl.gif
+    href: https://goblin-heart.net/sadgrl/
+  - name: lunospace
+    button: lunospace.gif
+    href: https://lostlove.neocities.org
+  - name: madeinv
+    button: madeinv.gif
+    href: https://madeinv.love
+  - name: modernpixels
+    button: modernpixels.gif
+    href: https://modernpixels.neocities.org
+  - name: shishka
+    button: shishka.gif
+    href: https://shishka.neocities.org
+  - name: shishka (nofollow)
+    button: nofollow.gif
+    href: https://shishka.neocities.org/nofollow/
+  - name: seafare
+    button: seafare.png
+    href: https://seafare.neocities.org/nofollow/
+  - name: softteddypaws
+    button: softteddypaws.gif
+    href: https://softteddypaws.neocities.org
+articles:
+  - title: The Deception of "Buying" Digital Movies
+    author: Matthew
+    href: https://worldofmatthew.com/technology/amazon-itunes-deception/
+    details: This guy really pointed out the problem that is affecting owner rights of digital products like movies or games.
+---
+
+<h1>Links</h1>
+<p>Here is a collection of Websites and Articles that I found online and love.</p>
+<section id="s-1">
+    <h2>Buttons</h2>
+    {% for button in buttons %}
+        <a target="_blank" class="not-text" href="{{ button.href }}" title="{{ buttons.name }}">
+            <img loading="lazy" decoding="async" width="88" height="31" src="{{ button.button }}" alt="A button of {{ button.name }} website">
+        </a>
+    {% endfor %}
+</section>
+<section id="s-2">
+    <h2>Articles</h2>
+    {% for article in articles %}
+        <article>
+            <h3><a target="_blank" href="{{ article.href }}">{{ article.title }}</a></h3>
+            <i>By {{ article.author }}</i>
+            <p>{{ article.details }}</p>
+        </article>
+        <hr>
+    {% endfor %}
+</section>

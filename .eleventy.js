@@ -74,6 +74,8 @@ module.exports = function(config) {
     config.addPassthroughCopy("src/**/*.jpg");
     config.addPassthroughCopy("src/**/*.webp");
     config.addPassthroughCopy("src/**/*.svg");
+    config.addPassthroughCopy("src/**/*.png");
+    config.addPassthroughCopy("src/**/*.gif");
 
     return {
         dir: {

@@ -9,6 +9,10 @@
             "href": "/blog/"
         },
         {
+            "title": "Links",
+            "href": "/links/"
+        },
+        {
             "title": "Settings",
             "href": "/settings/"
         }
