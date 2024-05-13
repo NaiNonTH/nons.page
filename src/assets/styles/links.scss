@@ -16,4 +16,8 @@ section {
 }
 #s-2 {
     grid-column: 5 / span 7;
+
+    article {
+        margin: 1rem 0;
+    }
 }
