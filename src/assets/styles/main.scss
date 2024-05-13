@@ -152,6 +152,10 @@ abbr[title] {
 button {
     font: inherit;
     border: none;
+
+    &[disabled] {
+        opacity: 0.3;
+    }
 }
 button,
 a.btn {
@@ -162,10 +166,9 @@ a.btn {
 
     transition: box-shadow 0.2s;
     will-change: box-shadow;
-
-    &:hover {
-        box-shadow: var(--box-shadow-md);
-    }
+}
+:is(a.btn, button:not([disabled])):hover {
+    box-shadow: var(--box-shadow-md);
 }
 :is(h1, h2, h3, h4, h5, h6):first-child {
     margin-top: 0;

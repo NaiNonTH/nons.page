@@ -43,6 +43,8 @@
 
         if (confirm) {
             localStorage.removeItem("preferences");
+            resetBtn.innerText = "Resetting...";
+            resetBtn.disabled = true;
             location.reload();
         }
     }
