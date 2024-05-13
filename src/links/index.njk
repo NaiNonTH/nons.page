@@ -49,6 +49,10 @@ articles:
     author: Matthew
     href: https://worldofmatthew.com/technology/amazon-itunes-deception/
     details: This guy really pointed out the problem that is affecting owner rights of digital products like movies or games.
+  - title: How the Blog Broke the Web
+    author: Amy Hoy
+    href: https://stackingthebricks.com/how-blogs-broke-the-web/
+    details: I saw this on <a href="https://ericmurphy.xyz/links">Eric Murphy's Link page</a>, which is about the cost of ease-of-use, and I found it pretty interesting.
 ---
 
 <h1>Links</h1>
@@ -67,7 +71,7 @@ articles:
         <article>
             <h3><a target="_blank" href="{{ article.href }}">{{ article.title }}</a></h3>
             <i>By {{ article.author }}</i>
-            <p>{{ article.details }}</p>
+            <p>{{ article.details | safe }}</p>
         </article>
         <hr>
     {% endfor %}
