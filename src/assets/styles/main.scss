@@ -10,6 +10,7 @@ html[theme="broken-hoe"] {
 
     --fg-prominence: var(--base);
     --fg-base: var(--prominence);
+    --fg-box: 0, 0, 0;
 
     --box-shadow-md:
         0 2px 3px rgba(0, 0, 0, 0.2),
@@ -120,8 +121,7 @@ footer {
             @extend %navigations-anchors;
 
             &:hover {
-                background: rgb(var(--prominence));
-                color: rgb(var(--box));
+                @extend %scheme-dark;
             }
         }
     }
