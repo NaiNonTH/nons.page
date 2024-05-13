@@ -5,7 +5,12 @@
     const html = document.documentElement;
 
     const themes = document.getElementsByName("themes");
-    const currentTheme = preferences.theme || "broken-hoe";
+    const currentTheme = 
+        preferences.theme || (
+            window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "bedtime"
+            : "broken-hoe"
+        );
 
     themes.forEach((theme) => {
         if (currentTheme === theme.value) {
