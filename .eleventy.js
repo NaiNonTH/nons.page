@@ -1,8 +1,15 @@
 const sass = require("sass");
 const uglifyjs = require("uglify-js");
 const htmlmin = require("html-minifier");
+const mdImplicitFigures = require("markdown-it-image-figures");
 
 module.exports = function(config) {
+    config.amendLibrary("md", (markdownIt) => markdownIt.use(mdImplicitFigures, {
+        figcaption: true,
+        lazy: true,
+        async: true
+    }));
+
     config.addFilter("formatDateSlug", function(dateFormat) {
         return `${dateFormat.getFullYear()}-${dateFormat.getMonth().toString().padStart(2, "0")}-${dateFormat.getDate().toString().padStart(2, "0")}`
     });

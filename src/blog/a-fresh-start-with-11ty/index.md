@@ -11,7 +11,7 @@ Before I made this website, I already had two old websites: my Devsite and my Ne
 
 Let's start with the problem of Devsite that I found somewhat stupid.
 
-![An Image of Devsite](devsite.jpg)
+![An Image of Devsite](devsite.jpg "An Image of Devsite")
 
 ### It is **CRINGE**
 
@@ -31,7 +31,7 @@ SvelteKit is still a pretty good tool for creating complex web apps, and I love 
 
 <aside><p>I got to give Neocities a credit though for letting me know that a website doesn't need to be professional; it can also be <strong>fun and creative!</strong></p></aside>
 
-![An Image of Neocities Website](neocities.jpg)
+![An Image of Neocities Website](neocities.jpg "An Image of Neocities Website")
 
 However, though, I think that the Neocities website I made also has problems.
 
