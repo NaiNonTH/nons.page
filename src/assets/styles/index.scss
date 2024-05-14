@@ -1,10 +1,8 @@
 @use "mixins" as *;
 
-section {
-    @extend %section-box;
-}
 #s-1 {
     @extend %scheme-dark;
+    @extend %section-box;
 
     grid-column: 2 / span 10;
     padding-block: 6rem;
@@ -30,12 +28,62 @@ section {
 #s-2 {
     grid-column: 2 / span 4;
 
-    nav ul {
-        padding: 0;
+    display: flex;
+    align-items: center;
+
+    border-top: 1px solid rgb(var(--box));
+    border-right: 1px solid rgb(var(--box));
+    border-top-right-radius: 20px;
+    
+    padding: 1rem 1rem 0 0;
+
+    > * {
+        margin: 0;
+    }
+    .spacer {
+        position: relative;
+        margin-inline: 1ch 1em;
+        flex-grow: 1;
+        height: 2.25em;
+        
+        &::after {
+            content: "";
+            position: absolute;
+            top: 1.25em;
+            inset-inline: 0;
+            height: 1px;
+            border-top: 1px solid currentColor;
+        }
+    }
+    ul {
+        display: flex;
+        gap: 0.5rem;
+        flex-direction: column;
         list-style: none;
+        padding: 0;
+    }
+    li {
+        position: relative;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: -1em;
+            top: 50%;
+        }
+        &::before {
+            width: 1em;
+            border-top: 1px solid currentColor;
+        }
+        &:not(:last-child)::after {
+            height: 3em;
+            border-left: 1px solid currentColor;
+        }
     }
 }
 #s-3 {
+    @extend %section-box;
     position: relative;
     grid-column: 6 / span 6;
     padding: 0;
