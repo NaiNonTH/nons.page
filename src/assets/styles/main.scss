@@ -28,6 +28,8 @@ html[theme="broken-hoe"] {
     --fg-prominence: var(--base);
     --fg-base: var(--prominence);
     --fg-box: 0, 0, 0;
+
+    color-scheme: only light;
 }
 html[theme="bedtime"] {
     --box: 75, 75, 134;
@@ -39,6 +41,8 @@ html[theme="bedtime"] {
     --fg-prominence: 210, 210, 255;
     --fg-base: var(--fg-prominence);
     --fg-box: 235, 235, 240;
+
+    color-scheme: only dark;
 }
 
 *,
@@ -202,6 +206,8 @@ hr {
         --fg-prominence: 210, 210, 255;
         --fg-base: var(--fg-prominence);
         --fg-box: 235, 235, 240;
+        
+        color-scheme: only dark;
     }
 }
 @media (max-width: 56.25em) or (max-height: 36rem) {
