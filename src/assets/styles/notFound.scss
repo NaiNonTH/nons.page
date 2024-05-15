@@ -1,0 +1,10 @@
+@use "mixins" as *;
+
+section {
+    @extend %reading-wrapper;
+    margin: 4.5rem auto;
+}
+h1 {
+    font-size: 3.5em;
+    text-align: center;
+}
