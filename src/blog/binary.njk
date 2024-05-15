@@ -1,20 +1,19 @@
 ---
-title: Blog Index
-description: Grouping my thoughts — blog posts — into a list for you to see.
+title: "Binary Blog"
 layout: "Main.njk"
-styles:
-  - blogIndex
 pagination:
-  data: collections.post
+  data: "collections.binary"
   reverse: true
   size: 12
-permalink: "/blog/{{ '' if pagination.pageNumber === 0 else pagination.pageNumber + 1 }}/"
+styles:
+  - blogIndex
+permalink: "/blog/binary/page/{{ pagination.pageNumber + 1 }}/"
 ---
 
 <h1 id="blog">
     Blog
     <span class="pageNumber">
-        {{ pagination.pageNumber + 1 }}<span class="total">/{{ pagination.items.length }}</span>
+        {{ pagination.pageNumber + 1 }}<span class="total">/{{ pagination.hrefs.length }}</span>
     </span>
 </h1>
 <section aria-labelledby="blog" id="index">
