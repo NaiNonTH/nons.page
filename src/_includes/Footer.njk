@@ -4,9 +4,8 @@
     </div>
     <nav>
         <ul>
-            {% for navigation in navigations.footer %}
-                <li><a href="{{ navigation.href }}">{{ navigation.title }}</a></li>
-            {% endfor %}
+            <li><a aria-current="{{ page.url === ("/accessibility/") }}" href="/accessibility/">Accessibility</a></li>
+            <li><a aria-current="{{ page.url === ("/credits/") }}" href="/credits/">Credits</a></li>
         </ul>
     </nav>
 </footer>

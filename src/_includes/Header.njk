@@ -7,9 +7,10 @@
             </picture>
         </a>
         <ul>
-            {% for navigation in navigations.header %}
-                <li><a aria-current="{{ page.url.startsWith(navigation.href) }}" href="{{ navigation.href }}">{{ navigation.title }}</a></li>
-            {% endfor %}
+            <li><a aria-current="{{ page.url === ("/webmaster/") }}" href="/webmaster/">Webmaster</a></li>
+            <li><a aria-current="{{ page.url === ("blog") }}" href="/blog/">Blog</a></li>
+            <li><a aria-current="{{ page.url === ("links") }}" href="/links/">Links</a></li>
+            <li style="margin-left: auto;"><a aria-current="{{ page.url === ("/settings/") }}" href="/settings/">Settings</a></li>
         </ul>
     </nav>
 </header>
