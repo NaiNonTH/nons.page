@@ -2,7 +2,7 @@
 title: A Fresh Start With 11ty
 description: "Before I made this website, I already had two old websites: my Devsite and my Neocities website. And I felt like they both were missing something. So I make a new one with a different philosophy behind it."
 tags:
-  - dev
+  - binary
 ---
 
 Before I made this website, I already had two old websites: my Devsite and my Neocities website. And I felt like they both were missing something. So I make a new one with a different philosophy behind it.
