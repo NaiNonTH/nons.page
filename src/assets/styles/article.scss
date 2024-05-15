@@ -1,10 +1,7 @@
 @use "mixins" as *;
 
 article {
-    grid-column: span 12;
-    width: 100%;
-    max-width: 75ch;
-    margin: auto;
+    @extend %reading-wrapper;
 
     img {
         max-width: 100%;

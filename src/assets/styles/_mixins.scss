@@ -3,6 +3,12 @@
     margin: auto;
     max-width: 56.25rem;
 }
+%reading-wrapper {
+    width: 100%;
+    max-width: 75ch;
+    margin: auto;
+    grid-column: span 12;
+}
 %scheme-light {
     background: rgb(var(--base-accent));
     color: rgb(var(--fg-base));
