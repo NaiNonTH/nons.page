@@ -136,7 +136,7 @@ footer {
         a {
             @extend %navigations-anchors;
 
-            &:hover {
+            &:is(:hover, [aria-current="true"]) {
                 @extend %scheme-dark;
             }
         }
