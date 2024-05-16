@@ -4,6 +4,7 @@ description: Crediting sources for Medias and Tools Used to build this website
 layout: "Article.njk"
 date: Last Modified
 timeDescription: Last Updated since
+eleventyExcludeFromCollections: true
 ---
 
 ## Medias
