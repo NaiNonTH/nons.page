@@ -1,13 +1,20 @@
 @use "mixins" as *;
 
 article {
-    @extend %reading-wrapper;
+    grid-column: span 12;
 
     img {
         max-width: 100%;
         max-height: 24rem;
         text-align: center;
     }
+}
+article > *:not(figure) {
+    max-width: 40rem;
+    margin-inline: auto;
+}
+i {
+    display: block;
 }
 h1 {
     font-size: 2.25em;
