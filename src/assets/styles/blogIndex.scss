@@ -1,9 +1,27 @@
 @use "mixins" as *;
 
+#tags-section {
+    @extend %section-box;
+    grid-column: 9 / span 3;
+    grid-row: 1 / span 2;
+    align-self: start;
+    margin-top: 2rem;
+    
+    ul {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    a {
+        display: block;
+    }
+}
 #index,
 #pagination,
 h1 {
-    grid-column: 2 / span 10;
+    grid-column: 2 / span 7;
 }
 h1,
 #index div {

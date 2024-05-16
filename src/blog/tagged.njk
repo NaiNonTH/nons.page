@@ -1,0 +1,48 @@
+---
+eleventyComputed:
+  title: "{{ tagAlias[tag] if tagAlias[tag] else '/' + tag + '/' }} Blog"
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - blog
+    - updates
+styles:
+  - blogIndex
+layout: "Main.njk"
+permalink: "/blog/category/{{ tag }}/"
+---
+
+<h1 id="blog">
+    {{ tagAlias[tag] if tagAlias[tag] else '/' + tag + '/' }} Blog
+</h1>
+<section aria-labelledby="tags" id="tags-section">
+    <h2 id="tags">More Tags</h2>
+    <ul>
+        {% for tag, _ in collections %}
+            {% if ["all", "blog", "updates"].includes(tag) %}
+            {% else %}
+                <li><a class="btn" href="/blog/category/{{ tag }}/">{{ tagAlias[tag] or tag }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</section>
+<section aria-labelledby="blog" id="index">
+    {% set tagContent = collections[tag] %}
+    {% for post in tagContent | reverse %}
+        <a href="{{ post.url }}">
+            <article>
+                <h2>
+                    {{ post.data.title }}
+                </h2>
+                <i>Posted on
+                    <time datetime="{{ post.date | formatDateSlug }}">
+                        {{ post.date | formatDate }}
+                    </time>
+                </i>
+            </article>
+        </a>
+    {% endfor %}
+</section>

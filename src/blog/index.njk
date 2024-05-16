@@ -1,13 +1,13 @@
 ---
-title: "Binary Blog"
+title: "Blog"
 layout: "Main.njk"
 pagination:
-  data: "collections.binary"
+  data: collections.blog
   reverse: true
   size: 12
 styles:
   - blogIndex
-permalink: "/blog/binary/page/{{ pagination.pageNumber + 1 }}/"
+permalink: "/blog/page/{{ pagination.pageNumber + 1 }}/"
 eleventyExcludeFromCollections: true
 ---
 
@@ -17,6 +17,17 @@ eleventyExcludeFromCollections: true
         {{ pagination.pageNumber + 1 }}<span class="total">/{{ pagination.hrefs.length }}</span>
     </span>
 </h1>
+<section aria-labelledby="tags" id="tags-section">
+    <h2 id="tags">Tags</h2>
+    <ul>
+        {% for tag, _ in collections %}
+            {% if ["all", "blog", "updates"].includes(tag) %}
+            {% else %}
+                <li><a class="btn" href="/blog/category/{{ tag }}/">{{ tagAlias[tag] or tag }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</section>
 <section aria-labelledby="blog" id="index">
     {% if pagination.href.previous %}
         <div class="previous">
@@ -29,7 +40,15 @@ eleventyExcludeFromCollections: true
                 <h2>
                     {{ post.data.title }}
                 </h2>
-                <i>Posted on <time datetime="{{ post.date | formatDateSlug }}">{{ post.date | formatDate }}</time></i>
+                <i>Posted on
+                    <time datetime="{{ post.date | formatDateSlug }}">
+                        {{ post.date | formatDate }}
+                    </time>
+                    in
+                    <b>
+                        {{ tagAlias[post.data.tags[1]] if tagAlias[post.data.tags[1]] else post.data.tags[1] }}
+                    </b>
+                </i>
             </article>
         </a>
     {% endfor %}
