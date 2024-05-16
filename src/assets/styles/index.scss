@@ -139,3 +139,7 @@
         object-fit: cover;
     }
 }
+#s-4 {
+    @extend %section-box;
+    grid-column: 2 / span 10;
+}

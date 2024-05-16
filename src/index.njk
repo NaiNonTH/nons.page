@@ -38,3 +38,14 @@ eleventyExcludeFromCollections: true
         </article>
     </a>
 </section>
+<section id="s-4" aria-labelledby="recent-update">
+    <article>
+        {% set recentUpdate = collections.updates[0] %}
+        <h2 id="recent-update">Site Update
+            <span style="display:inline-block;">
+                ({{ recentUpdate.date | formatDate }})
+            </span>
+        </h2>
+        {{ recentUpdate.content | safe }}
+    </article>
+</section>
