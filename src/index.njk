@@ -26,7 +26,7 @@ eleventyExcludeFromCollections: true
     </ul>
 </section>
 <section id="s-3" aria-labelledby="latest-post">
-    {% set latestPost = collections.blog[0] %}
+    {% set latestPost = (collections.blog | reverse)[0] %}
     <h2 id="latest-post">Latest Post</h2>
     <a class="not-text" href={{ latestPost.url }}>
         <article>
@@ -40,7 +40,7 @@ eleventyExcludeFromCollections: true
 </section>
 <section id="s-4" aria-labelledby="recent-update">
     <article>
-        {% set recentUpdate = collections.updates[0] %}
+        {% set recentUpdate = (collections.updates | reverse)[0] %}
         <h2 id="recent-update">Site Update
             <span style="display:inline-block;">
                 ({{ recentUpdate.date | formatDate }})

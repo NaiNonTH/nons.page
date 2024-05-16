@@ -10,7 +10,7 @@ permalink: "/updates/"
 
 <h1 id="updates">Updates</h1>
 <section aria-labelledby="updates">
-    {% for update in collections.updates %}
+    {% for update in collections.updates | reverse %}
         <article>
             <h2>Update: {{ update.date | formatDate }}</h2>
             {{ update.content | safe }}
