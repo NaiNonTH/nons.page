@@ -1,0 +1,11 @@
+@use "mixins" as *;
+
+h1,
+section {
+    grid-column: 2 / span 10;
+}
+article {
+    @extend %scheme-light-contrast;
+    padding: 1rem;
+    border-bottom: 2px solid rgb(var(--base));
+}
