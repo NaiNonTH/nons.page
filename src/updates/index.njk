@@ -1,6 +1,9 @@
 ---
 title: Updates
 description: Listing all site updates since the beginning.
+rss:
+  title: NaiNonTheN00b1 Site Updates
+  href: "/updates/feed.xml"
 layout: "Main.njk"
 styles:
   - updates
@@ -10,6 +13,9 @@ permalink: "/updates/"
 
 <h1 id="updates">Updates</h1>
 <section aria-labelledby="updates">
+    <div>
+        <a class="btn" href="/updates/feed.xml">Subscribe via RSS</a>
+    </div>
     {% for update in collections.updates | reverse %}
         <article>
             <h2>Update: {{ update.date | formatDate }}</h2>

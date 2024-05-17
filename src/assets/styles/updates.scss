@@ -3,6 +3,15 @@
 h1,
 section {
     grid-column: 2 / span 10;
+    
+    div {
+        display: flex;
+        margin-bottom: 1rem;
+
+        a {
+            margin-left: auto;
+        }
+    }
 }
 article {
     @extend %scheme-light-contrast;

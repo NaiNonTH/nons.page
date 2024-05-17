@@ -1,6 +1,10 @@
 ---
 title: "Blog"
 layout: "Main.njk"
+rss:
+  title: NaiNonTheN00b1's Blog
+  href: "/blog/feed.xml"
+description: A place where I would write my thoughts, interests, and things that is going on.
 pagination:
   data: collections.blog
   reverse: true
@@ -29,11 +33,12 @@ eleventyExcludeFromCollections: true
     </ul>
 </section>
 <section aria-labelledby="blog" id="index">
-    {% if pagination.href.previous %}
-        <div class="previous">
+    <div class="previous">
+        {% if pagination.href.previous %}
             <a class="btn" href="{{ pagination.href.previous }}">Previous</a>
-        </div>
-    {% endif %}
+        {% endif %}
+        <a class="btn feed" href="/blog/feed.xml">Subscribe via RSS</a>
+    </div>
     {% for post in pagination.items %}
         <a href="{{ post.url }}">
             <article>

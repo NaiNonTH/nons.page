@@ -12,6 +12,9 @@
     {% for metaName, metaContent in metas %}
         <meta name="{{ metaName }}" content="{{ metaContent }}">
     {% endfor %}
+    {% if rss %}
+        <link rel="alternate" type="application/rss+xml" href="{{ rss.href }}" title="{{ rss.title }}">
+    {% endif %}
     <link rel="shortcut icon" href="/assets/images/avatar.webp" type="image/x-icon">
     <link rel="stylesheet" href="/assets/styles/main.css">
     {% for style in styles %}

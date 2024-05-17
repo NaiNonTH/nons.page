@@ -2,8 +2,11 @@ const sass = require("sass");
 const uglifyjs = require("uglify-js");
 const htmlmin = require("html-minifier");
 const mdImplicitFigures = require("markdown-it-image-figures");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function(config) {
+	config.addPlugin(pluginRss);
+
     config.amendLibrary("md", (markdownIt) => markdownIt.use(mdImplicitFigures, {
         figcaption: true,
         lazy: true,

@@ -1,0 +1,34 @@
+---
+permalink: "/updates/feed.xml"
+eleventyExcludeFromCollections: true
+layout: false
+metadata:
+  title: NaiNonTheN00b1 Site Updates
+  subtitle: Lists all NaiNonTheN00b1's personal website updates
+  language: en
+eleventyComputed:
+  metadata:
+    url: "{{ global.baseURL }}"
+    author: "{{ global.authorName }}"
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="{{ metadata.url }}" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>{{ metadata.title }}</title>
+        <link>{{ metadata.url }}</link>
+        <atom:link href="{{ permalink | absoluteUrl(metadata.url) }}" rel="self" type="application/rss+xml" />
+        <description>{{ metadata.subtitle }}</description>
+        <language>{{ metadata.language }}</language>
+        {%- for post in collections.updates | reverse %}
+        {%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
+        <item>
+            <title>{{ post.data.title }}</title>
+            <link href="{{ "/updates/" | absoluteUrl(metadata.url) }}" rel="self" type="application/rss+xml" />
+            <description>{{ post.content | htmlToAbsoluteUrls(absolutePostUrl) }}</description>
+            <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
+            <dc:creator>{{ metadata.author }}</dc:creator>
+            <guid>{{ "/updates/" | absoluteUrl(metadata.url) }}</guid>
+        </item>
+        {%- endfor %}
+    </channel>
+</rss>
