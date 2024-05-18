@@ -7,7 +7,7 @@
     <meta name="robots" content="noai">
     <meta name="robots" content="noimageai">
     {% if thumbnail %}
-        <meta name="og:image" content="{{ page.url }}{{ thumbnail }}">
+        <meta name="og:image" content="{{ (page.url + thumbnail) | absoluteUrl(global.baseURL) }}">
     {% endif %}
     {% for metaName, metaContent in metas %}
         <meta name="{{ metaName }}" content="{{ metaContent }}">
