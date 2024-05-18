@@ -141,5 +141,19 @@
 }
 #s-4 {
     @extend %section-box;
-    grid-column: 2 / span 10;
+    grid-column: 2 / span 6;
+}
+#s-5 {
+    @extend %section-box;
+    grid-column: 8 / span 4;
+
+    textarea {
+        width: 100%;
+        white-space: nowrap;
+        resize: vertical;
+        padding-bottom: calc(1ch + 12px);
+    }
+    > *:not(h2) {
+        text-align: center;
+    }
 }

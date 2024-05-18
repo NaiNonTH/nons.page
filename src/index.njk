@@ -46,3 +46,14 @@ eleventyExcludeFromCollections: true
         {{ recentUpdate.content | safe }}
     </article>
 </section>
+<section id="s-5" aria-labelledby="buttons">
+    <h2 id="buttons">Buttons</h2>
+    <div>
+        <a class="not-text" href="/">
+            <img width="88" height="31" loading="lazy" decoding="async" src="/button-light.jpg" alt="NaiNonTheN00b1 Button">
+        </a>
+    </div>
+    <p>Share my site on your website</p>
+    <textarea id="light-button" onfocus="this.select()" rows="1" readonly>&lt;a href="{{ global.baseURL }}"&gt;&lt;img width="88" height="31" loading="lazy" decoding="async" src="{{ 'button-light.jpg' | absoluteUrl(global.baseURL) }}" alt="NaiNonTheN00b1 Button"&gt;&lt;/a&gt;</textarea>
+    <p>(dark version is coming soon)</p>
+</section>
