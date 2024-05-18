@@ -33,7 +33,7 @@ eleventyExcludeFromCollections: true
             <h3>{{ latestPost.data.title }}</h3>
             <picture>
                 <source srcset="{{ latestPost.url + 'thumbnail.webp' }}" type="image/webp">
-                <img src="{{ latestPost.url + 'thumbnail.jpg' }}" alt="A Thumbnail for Latest Post: {{ latestPost.data.title }}">
+                <img loading="lazy" decoding="async" src="{{ latestPost.url + 'thumbnail.jpg' }}" alt="A Thumbnail for Latest Post: {{ latestPost.data.title }}">
             </picture>
         </article>
     </a>
