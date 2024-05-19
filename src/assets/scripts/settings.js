@@ -36,6 +36,7 @@
             localStorage.removeItem("preferences");
             resetBtn.innerText = "Resetting...";
             resetBtn.disabled = true;
+            html.style.cursor = "progress";
             location.reload();
         }
     }
