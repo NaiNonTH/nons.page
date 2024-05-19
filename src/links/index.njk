@@ -59,23 +59,34 @@ articles:
 ---
 
 <h1>Links</h1>
-<p>Here is a collection of Websites and Articles that I found online and love.</p>
-<section id="s-1">
-    <h2>Buttons</h2>
-    {% for button in buttons %}
-        <a target="_blank" class="not-text" href="{{ button.href }}" title="{{ buttons.name }}">
-            <img loading="lazy" decoding="async" width="88" height="31" src="{{ button.button }}" alt="A button of {{ button.name }} website">
-        </a>
-    {% endfor %}
-</section>
-<section id="s-2">
-    <h2>Articles</h2>
-    {% for article in articles %}
-        <article>
-            <h3><a target="_blank" href="{{ article.href }}">{{ article.title }}</a></h3>
-            <i>By {{ article.author }}</i>
-            <p>{{ article.details | safe }}</p>
-        </article>
-        <hr>
-    {% endfor %}
-</section>
+<p>Here is a collection of Websites, Articles, or Channels on Video Sharing Platform (like YouTube) that I found online and love.</p>
+<div class="left">
+    <section aria-labelledby="buttons" id="s-1">
+        <h2 id="buttons">Buttons</h2>
+        {% for button in buttons %}
+            <a target="_blank" class="not-text" href="{{ button.href }}" title="{{ buttons.name }}">
+                <img loading="lazy" decoding="async" width="88" height="31" src="{{ button.button }}" alt="A button of {{ button.name }} website">
+            </a>
+        {% endfor %}
+    </section>
+    <section aria-labelledby="channels" id="s-3">
+        <h2 id="channels">Video Creators</h2>
+        <ul>
+            <li><a href="https://www.youtube.com/@EricMurphyxyz">Eric Murphy</a></li>
+            <li><a href="https://www.youtube.com/@VisualVenture">Visual Venture</a></li>
+        </ul>
+    </section>
+</div>
+<div class="right">
+    <section aria-labelledby="articles" id="s-2">
+        <h2 id="articles">Articles</h2>
+        {% for article in articles %}
+            <article>
+                <h3><a target="_blank" href="{{ article.href }}">{{ article.title }}</a></h3>
+                <i>By {{ article.author }}</i>
+                <p>{{ article.details | safe }}</p>
+            </article>
+            <hr>
+        {% endfor %}
+    </section>
+</div>
