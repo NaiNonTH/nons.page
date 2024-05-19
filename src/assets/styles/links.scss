@@ -19,9 +19,16 @@ main > div {
 .right {
     grid-column: 5 / span 7;
 }
-#s-1 {
-    padding: 1rem 0.25rem;
+#s-1,
+#s-3 h2 {
     text-align: center;
+}
+#s-1,
+#s-3 {
+    padding: 1rem;
+}
+#s-3 ul {
+    padding-left: 1.25em;
 }
 #s-2 article {
     margin: 1rem 0;
