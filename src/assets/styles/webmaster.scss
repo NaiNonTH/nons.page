@@ -5,12 +5,20 @@ section {
 }
 #s-1 {
     grid-column: 2 / span 7;
-
-    article {
-        display: flex;
-        gap: 1.5rem;
+    display: grid;
+    grid-template:
+        auto / auto 1fr;
+    gap: 1rem;
         align-items: center;
-        flex-wrap: wrap;
+
+    h1 {
+        margin: 0;
+        grid-column: span 2;
+    }
+    @media (max-width: 36rem) {
+        picture {
+            display: none;
+        }
     }
 }
 #s-2 {
