@@ -116,7 +116,7 @@ main {
     height: 100%;
 
     display: grid;
-    gap: 1.25rem;
+    gap: 1.5rem;
     grid-template-columns: repeat(12, 1fr);
 }
 footer {
@@ -211,7 +211,7 @@ hr {
         color-scheme: only dark;
     }
 }
-@media (max-width: 56.25em) or (max-height: 36rem) {
+@media (max-width: 56.25rem) or (max-height: 36rem) {
     header {
         --top-offset: 0;
     }
