@@ -20,6 +20,7 @@
     {% for style in styles %}
         <link rel="stylesheet" href="/assets/styles/{{ style }}.css">
     {% endfor %}
+    <noscript><link rel="stylesheet" href="/assets/styles/noscript.css"></noscript>
     <title>{{ title if page.url === "/" else title + " | NaiNonTheN00b1" }}</title>
 </head>
 <body>
