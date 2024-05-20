@@ -61,14 +61,12 @@ body {
     min-width: 20rem;
 }
 header {
-    --top-offset: 2rem;
-
-    margin-top: var(--top-offset);
     @extend %scheme-dark;
 }
 header nav {
     @extend %site-wrapper;
     --avatar-size: 100px;
+    margin-top: 2rem;
 
     ul {
         @extend %navigations;
@@ -212,11 +210,9 @@ hr {
     }
 }
 @media (max-width: 56.25rem) or (max-height: 36rem) {
-    header {
-        --top-offset: 0;
-    }
     header nav {
         --avatar-size: 80px;
+        margin-top: 0;
     }
     main {
         display: flex;
