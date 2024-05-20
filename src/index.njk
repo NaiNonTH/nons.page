@@ -52,8 +52,14 @@ eleventyExcludeFromCollections: true
         <a class="not-text" href="/">
             <img width="88" height="31" loading="lazy" decoding="async" src="/button-light.jpg" alt="NaiNonTheN00b1 Button">
         </a>
+        <a class="not-text" href="/">
+            <img width="88" height="31" loading="lazy" decoding="async" src="/button-dark.jpg" alt="NaiNonTheN00b1 Button">
+        </a>
     </div>
     <p>Share my site on your website</p>
+    <label for="light-button">Light:</label>
     <textarea id="light-button" onfocus="this.select()" rows="1" readonly>&lt;a href="{{ global.baseURL }}"&gt;&lt;img width="88" height="31" loading="lazy" decoding="async" src="{{ 'button-light.jpg' | absoluteUrl(global.baseURL) }}" alt="NaiNonTheN00b1 Button"&gt;&lt;/a&gt;</textarea>
-    <p>(dark version is coming soon)</p>
+    <label for="dark-button">Dark:</label>
+    <textarea id="dark-button" onfocus="this.select()" rows="1" readonly>&lt;a href="{{ global.baseURL }}"&gt;&lt;img width="88" height="31" loading="lazy" decoding="async" src="{{ 'button-dark.jpg' | absoluteUrl(global.baseURL) }}" alt="NaiNonTheN00b1 Button"&gt;&lt;/a&gt;</textarea>
+    <p>Alternatively, you can use my <a target="_blank" href="https://nainonth.neocities.org/assets/images/me/button.jpg">Old Neocities button</a></p>
 </section>

@@ -152,8 +152,13 @@
         white-space: nowrap;
         resize: vertical;
         padding-bottom: calc(1ch + 12px);
+        overflow-y: hidden;
     }
     > *:not(h2) {
         text-align: center;
+    }
+    label {
+        display: inline-block;
+        margin-bottom: 0.25rem;
     }
 }
