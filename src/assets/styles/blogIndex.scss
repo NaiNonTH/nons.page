@@ -60,7 +60,6 @@ article {
     padding: 1rem;
     border-bottom: 2px solid rgb(var(--base));
     transition: box-shadow 0.2s;
-    will-change: box-shadow;
     
     &:hover {
         box-shadow: var(--box-shadow-md);
