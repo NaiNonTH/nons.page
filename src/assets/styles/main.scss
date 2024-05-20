@@ -145,6 +145,26 @@ a,
 abbr[title] {
     text-decoration: none;
 }
+abbr[title]::after {
+    content: attr(title);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    @extend %site-wrapper;
+    padding: 1rem;
+    background: #000;
+    color: #fff;
+    z-index: 9;
+
+    transform: translateY(100%);
+    transition: transform 0.2s;
+    will-change: transform;
+}
+html:not([no-mobile-tooltip="true"]) abbr[title]:hover::after {
+    transform: translateY(0);
+}
 a:not(:is(header, footer) nav a, .btn, .not-text) {
     color: rgb(var(--hyperlinked));
     border-bottom: 1px solid;
