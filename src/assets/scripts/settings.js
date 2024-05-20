@@ -17,13 +17,17 @@
             theme.checked = true;
         }
 
-        theme.addEventListener("change", () => {
-            html.setAttribute("theme", theme.value);
-            setPreference("theme", theme.value);
-        })
+        theme.addEventListener("change", () => setPreference("theme", theme.value));
     });
 
+    const noMobileTooltip = document.getElementById("no-mobile-tooltip");
+    if (preferences["no-mobile-tooltip"])
+        noMobileTooltip.checked = true;
+
+    noMobileTooltip.addEventListener("change", () => setPreference("no-mobile-tooltip", noMobileTooltip.checked));
+
     function setPreference(name, value) {
+        html.setAttribute(name, value);
         preferences[name] = value;
         localStorage.setItem("preferences", JSON.stringify(preferences));
     }
