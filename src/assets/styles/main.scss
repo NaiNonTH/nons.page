@@ -88,9 +88,6 @@ header nav {
     z-index: 1;
     transform: translateY(-50%);
 
-    &:hover img {
-        filter: brightness(1.35);
-    }
     &[aria-current="true"] img {
         box-shadow: 
             0 0 0 2px rgb(var(--base)),
@@ -139,6 +136,12 @@ footer {
             }
         }
     }
+}
+a img {
+    transition: filter 0.2s;
+}
+a:hover img {
+    filter: brightness(1.2);
 }
 a,
 abbr[title] {
