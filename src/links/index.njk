@@ -79,7 +79,7 @@ articles:
     <section aria-labelledby="buttons" id="s-1">
         <h2 id="buttons">Buttons</h2>
         {% for button in buttons %}
-            <a target="_blank" class="not-text" href="{{ button.href }}" title="{{ buttons.name }}">
+            <a target="_blank" class="not-text" href="{{ button.href }}" title="{{ button.name }}">
                 <img loading="lazy" decoding="async" width="88" height="31" src="{{ button.button }}" alt="A button of {{ button.name }} website">
             </a>
         {% endfor %}
