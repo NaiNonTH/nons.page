@@ -7,7 +7,9 @@ styles:
 {% block main %}
     <article>
         <h1>{{ title }}</h1>
-        <i>{{ timeDescription }} <time datetime="{{ page.date | formatDateSlug }}">{{ page.date | formatDate }}</time></i>
+        {% if timeDescription %}
+          <i>{{ timeDescription }} <time datetime="{{ page.date | formatDateSlug }}">{{ page.date | formatDate }}</time></i>
+        {% endif %}
         <hr>
         {{ content | safe }}
     </article>
