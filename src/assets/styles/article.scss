@@ -23,13 +23,29 @@ h1 {
 figure {
     @extend %scheme-light-contrast;
     max-width: fit-content;
-    margin: 1em auto;
+    margin: 2.5em auto;
     padding: 1%;
     box-shadow: var(--box-shadow-md),
 }
 figcaption {
     text-align: center;
     font-size: 0.85em;
+}
+table {
+    margin-block: 2.5em;
+    overflow-x: auto;
+    border-bottom: 1px solid rgb(var(--box));
+
+    th, td {
+        padding: 0.5em;
+    }
+    th {
+        @extend %scheme-light-contrast;
+        font-size: 1.125em;
+    }
+    tr:nth-child(even) td {
+        background: rgb(var(--base));
+    }
 }
 @media only print {
     html {
