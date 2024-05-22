@@ -116,23 +116,37 @@ main {
 footer {
     @extend %site-wrapper;
     @extend %scheme-light-contrast;
-    padding: 0 1rem;
-    overflow-x: auto;
 
     display: flex;
-    gap: 1rem;
-    align-items: center;
-    justify-content: space-between;
-    white-space: nowrap;
-    
-    nav ul {
-        @extend %navigations;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    margin-bottom: 3rem;
+    border-radius: 0 0 20px 20px;
 
-        a {
-            @extend %navigations-anchors;
+    > * {
+        min-width: fit-content;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    div {
+        padding: 0.5em 2em 1em;
+    }
+    nav {
+        margin-left: auto;
+        
+        ul {
+            margin: 0;
 
-            &:is(:hover, [aria-current="true"]) {
-                @extend %scheme-dark;
+            a {
+                @extend %navigations-anchors;
+                border-radius: 9em 0 0 9em;
+                padding: 0.5em 2em 0.5em 1.5em;
+
+                &:is(:hover, [aria-current="true"]) {
+                    @extend %scheme-light;
+                }
             }
         }
     }
