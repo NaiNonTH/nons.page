@@ -9,6 +9,7 @@
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@types/bun": "latest",
+    "clean-css": "^5.3.3",
     "html-minifier": "^4.0.0",
     "markdown-it-image-figures": "^2.1.1",
     "sass": "^1.75.0",

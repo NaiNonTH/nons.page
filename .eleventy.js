@@ -3,6 +3,7 @@ const uglifyjs = require("uglify-js");
 const htmlmin = require("html-minifier");
 const mdImplicitFigures = require("markdown-it-image-figures");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const CleanCSS = require("clean-css");
 
 module.exports = function(config) {
 	config.addPlugin(pluginRss);
@@ -40,13 +41,11 @@ module.exports = function(config) {
         compile: async function (_, inputPath) {
             if (inputPath.split("/").at(-1).startsWith("_")) return;
 
-            const result = await sass.compileAsync(inputPath, {
-                "charset": "UTF-8",
-                "style": "compressed"
-            });
+            const compiled = await sass.compileAsync(inputPath, { charset: "UTF-8" });
+            const minified = new CleanCSS().minify(compiled.css);
 
             return () => {
-                return result.css;
+                return minified.styles;
             };
         }
     });
