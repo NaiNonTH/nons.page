@@ -229,7 +229,7 @@ hr {
         color-scheme: only dark;
     }
 }
-@media (max-width: calc(56.25rem + 1rem)) or (max-height: 36rem) {
+@media (max-width: calc(56.25rem + 1px)) or (max-height: 36rem) {
     header nav {
         --avatar-size: 80px;
         margin-top: 0;
