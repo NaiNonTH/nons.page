@@ -67,23 +67,40 @@ body {
 header {
     @extend %scheme-dark;
 }
-header nav {
-    @extend %site-wrapper;
-    --avatar-size: 100px;
-    margin-top: 2em;
-
-    ul {
-        @extend %navigations;
-        margin-left: calc(var(--avatar-size) + 2em);
-        overflow: auto hidden;
-
-        a {
-            @extend %navigations-anchors;
-        }
-        a:is(:hover, [aria-current="true"]) {
+header {
+    label {
+        display: none;
+    
+        @extend %navigations-anchors;
+        margin-left: auto;
+        text-align: right;
+        width: fit-content;
+    
+        &:hover, #menu-btn:checked ~ & {
             @extend %scheme-light;
         }
     }
+    nav {
+        @extend %site-wrapper;
+        --avatar-size: 100px;
+        margin-top: 2em;
+
+        ul {
+            @extend %navigations;
+            margin-left: calc(var(--avatar-size) + 2em);
+
+            a {
+                @extend %navigations-anchors;
+            }
+            a:is(:hover, [aria-current="true"]) {
+                @extend %scheme-light;
+            }
+        }
+    }
+}
+#menu-btn {
+    @extend %absolute;
+    opacity: 0;
 }
 .avatar {
     @extend %absolute;
@@ -249,15 +266,47 @@ hr {
         color-scheme: only dark;
     }
 }
-@media (max-width: 62.5rem) {
-    header nav {
-        --avatar-size: 80px;
-        margin-top: 0;
+@media (prefers-reduced-motion) {
+    * {
+        transition-duration: 0s !important;
     }
-    main {
-        display: flex;
-        flex-direction: column;
-        padding: 3em 3%;
+}
+@media (max-width: 48rem) {
+    header {
+        label {
+            display: block;
+
+            &::before {
+                content: "Open ";
+            }
+        }
+        nav {
+            --avatar-size: 80px;
+            margin-top: 0;
+
+            ul {
+                background: rgb(var(--prominence));
+                color: rgb(var(--fg-prominence));
+
+                position: absolute;
+                z-index: 1;
+                bottom: 0;
+                right: 0;
+                transform: translateY(100%);
+                margin: 0;
+                display: none;
+
+                flex-direction: column;
+            }
+        }
+    }
+    #menu-btn:checked {
+        ~ label::before {
+            content: "Close ";
+        }
+        ~ ul {
+            display: flex;
+        }
     }
     .avatar {
         top: 5px;
@@ -267,8 +316,15 @@ hr {
         box-shadow: 0 0 0 8px rgb(var(--prominence));
     }
 }
-@media (prefers-reduced-motion) {
-    * {
-        transition-duration: 0s !important;
+@media (max-width: 62.5rem) {
+    main {
+        display: flex;
+        flex-direction: column;
+        padding: 3em 3%;
+    }
+}
+@media (min-width: calc(48rem + 1px)) {
+    .settings {
+        margin-left: auto;
     }
 }
