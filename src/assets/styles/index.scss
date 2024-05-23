@@ -20,7 +20,10 @@
         border-radius: 50%;
         box-shadow: var(--box-shadow-md);
     }
-
+    a {
+        color: rgb(var(--prominence-hyperlinked));
+    }
+    
     @media (max-width: 56.25em) {
         flex-direction: column;
     }
