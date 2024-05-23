@@ -53,12 +53,12 @@ html[theme="bedtime"] {
 }
 html {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1.125em;
     background: rgb(var(--base));
 }
 body {
     margin: 0;
-    min-width: 20rem;
+    font-size: 1.125rem;
+    min-width: 20em;
 }
 header {
     @extend %scheme-dark;
@@ -66,11 +66,11 @@ header {
 header nav {
     @extend %site-wrapper;
     --avatar-size: 100px;
-    margin-top: 2rem;
+    margin-top: 2em;
 
     ul {
         @extend %navigations;
-        margin-left: calc(var(--avatar-size) + 2rem);
+        margin-left: calc(var(--avatar-size) + 2em);
         overflow: auto hidden;
 
         a {
@@ -84,7 +84,7 @@ header nav {
 .avatar {
     @extend %absolute;
     top: 50%;
-    left: 1rem;
+    left: 1em;
     z-index: 1;
     transform: translateY(-50%);
 
@@ -105,12 +105,12 @@ header nav {
 main {
     @extend %site-wrapper;
     @extend %scheme-light;
-    padding: 3rem 1.5rem;
+    padding: 3em 1.5em;
     width: 100%;
     height: 100%;
 
     display: grid;
-    gap: 1.5rem;
+    gap: 1.5em;
     grid-template-columns: repeat(12, 1fr);
 }
 footer {
@@ -119,8 +119,8 @@ footer {
 
     display: flex;
     flex-wrap: wrap;
-    padding: 1rem 0;
-    margin-bottom: 3rem;
+    padding: 1em 0;
+    margin-bottom: 3em;
     border-radius: 0 0 20px 20px;
 
     > * {
@@ -169,7 +169,7 @@ abbr[title]::after {
     right: 0;
 
     @extend %site-wrapper;
-    padding: 1rem;
+    padding: 1em;
     background: #000;
     color: #fff;
     z-index: 9;
@@ -243,7 +243,7 @@ hr {
         color-scheme: only dark;
     }
 }
-@media (max-width: 56.25rem) or (max-height: 36rem) {
+@media (max-width: 62.5rem) {
     header nav {
         --avatar-size: 80px;
         margin-top: 0;
@@ -251,6 +251,7 @@ hr {
     main {
         display: flex;
         flex-direction: column;
+        padding: 3em 3%;
     }
     .avatar {
         top: 5px;

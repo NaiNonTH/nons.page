@@ -5,12 +5,12 @@ article {
 
     img {
         max-width: 100%;
-        max-height: 24rem;
+        max-height: 24em;
         text-align: center;
     }
 }
 article > *:not(figure) {
-    max-width: 40rem;
+    max-width: 45rem;
     margin-inline: auto;
 }
 i {

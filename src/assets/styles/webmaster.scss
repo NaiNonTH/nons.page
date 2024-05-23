@@ -8,14 +8,14 @@ section {
     display: grid;
     grid-template:
         auto / auto 1fr;
-    gap: 1rem;
+    gap: 1em;
     align-items: center;
 
     h1 {
         margin: 0;
         grid-column: span 2;
     }
-    @media (max-width: 36rem) {
+    @media (max-width: 36em) {
         picture {
             display: none;
         }
@@ -30,9 +30,9 @@ section {
     a {
         --branding: rgb(var(--prominence));
 
-        min-height: 4.5rem;
+        min-height: 4.5em;
         position: relative;
-        flex: 1 1 6rem;
+        flex: 1 1 6em;
         background: var(--branding);
 
         transition: box-shadow 0.2s;
@@ -56,7 +56,7 @@ section {
 #s-3 {
     grid-column: 2 / span 4;
 
-    @media (min-width: calc(56.25rem + 1px)) {
+    @media (min-width: calc(62.5rem + 1px)) {
         align-self: start;
     }
 }
@@ -65,12 +65,12 @@ section {
 
     i {
         float: right;
-        margin-top: 1rem;
+        margin-top: 1em;
     }
 }
 table th {
     white-space: nowrap;
     vertical-align: baseline;
-    padding-right: 1.5rem;
+    padding-right: 1.5em;
     text-align: left;
 }
