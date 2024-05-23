@@ -13,13 +13,17 @@ html[theme="broken-hoe"] {
     --base: 250, 234, 215;
     --base-accent: 255, 244, 230;
     --prominence: 39, 28, 9;
+
     --hyperlinked: 42, 42, 223;
+    --prominence-hyperlinked: 255, 226, 50;
 }
 html[theme="navy"] {
     --base: 240, 240, 255;
     --base-accent: 250, 250, 255;
     --prominence: 0, 0, 66;
+
     --hyperlinked: 42, 42, 223;
+    --prominence-hyperlinked: 150, 221, 255;
 }
 :root,
 html[theme="navy"],
@@ -234,7 +238,9 @@ hr {
         --base: 40, 40, 60;
         --base-accent: 45, 45, 75;
         --prominence: 25, 25, 35;
+
         --hyperlinked: 255, 227, 135;
+        --prominence-hyperlinked: var(--hyperlinked);
 
         --fg-prominence: 210, 210, 255;
         --fg-base: var(--fg-prominence);
