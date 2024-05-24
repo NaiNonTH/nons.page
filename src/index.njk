@@ -48,9 +48,9 @@ eleventyExcludeFromCollections: true
     </a>
 </section>
 <section id="s-4" aria-labelledby="recent-update">
+    <h2 id="recent-update">Site Update</h2>
     <article>
         {% set recentUpdate = (collections.updates | reverse)[0] %}
-        <h2 id="recent-update">Site Update</h2>
         <h3><a href="/updates/">{{ recentUpdate.date | formatDate }}</a></h3>
         {{ recentUpdate.content | safe }}
     </article>

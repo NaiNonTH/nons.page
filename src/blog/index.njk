@@ -32,7 +32,7 @@ eleventyExcludeFromCollections: true
         {% endfor %}
     </ul>
 </section>
-<section aria-labelledby="blog" id="index">
+<div id="index">
     <div class="previous">
         {% if pagination.href.previous %}
             <a class="btn" href="{{ pagination.href.previous }}">Previous</a>
@@ -62,4 +62,4 @@ eleventyExcludeFromCollections: true
             <a class="btn" href="{{ pagination.href.next }}">Next</a>
         </div>
     {% endif %}
-</section>
+</div>

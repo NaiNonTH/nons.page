@@ -11,8 +11,8 @@ eleventyExcludeFromCollections: true
 permalink: "/updates/"
 ---
 
-<h1 id="updates">Site Updates</h1>
-<section aria-labelledby="updates">
+<div class="wrapper">
+    <h1 id="updates">Site Updates</h1>
     <div>
         <a class="btn" href="/updates/feed.xml">Subscribe via RSS</a>
     </div>
@@ -22,4 +22,4 @@ permalink: "/updates/"
             {{ update.content | safe }}
         </article>
     {% endfor %}
-</section>
+</div>

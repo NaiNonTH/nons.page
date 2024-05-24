@@ -1,7 +1,6 @@
 @use "mixins" as *;
 
-h1,
-section {
+.wrapper {
     grid-column: 2 / span 10;
     
     div {
