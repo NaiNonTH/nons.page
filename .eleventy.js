@@ -42,7 +42,15 @@ module.exports = function(config) {
             if (inputPath.split("/").at(-1).startsWith("_")) return;
 
             const compiled = await sass.compileAsync(inputPath, { charset: "UTF-8" });
-            const minified = new CleanCSS().minify(compiled.css);
+            const minified =
+                new CleanCSS({
+                    level: 2,
+                    compatibility: {
+                        colors: {
+                            hexAlpha: true
+                        }
+                    },
+                }).minify(compiled.css);
 
             return () => {
                 return minified.styles;
