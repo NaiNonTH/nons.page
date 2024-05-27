@@ -9,3 +9,4 @@ NaiNonTheN00b1's Personal Site built with 11ty.
 - [SASS](https://sass-lang.com)
 - [UglifyJS](https://www.npmjs.com/package/uglify-js)
 - [HTML Minifier](https://www.npmjs.com/package/html-minifier)
+- [Clean CSS](https://www.npmjs.com/package/clean-css) (yep, it's better than SASS')

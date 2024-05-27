@@ -15,6 +15,7 @@ eleventyExcludeFromCollections: true
 
 - [11ty](https://11ty.dev) for Static Site generator.
 - [Bun](https://bun.sh) for JavaScript runtime.
-- [SASS](https://sass-lang.com) for CSS Preprocessor and minifier.
+- [SASS](https://sass-lang.com) for CSS Preprocessor.
 - [UglifyJS](https://www.npmjs.com/package/uglify-js) for JavaScript minifier.
 - [HTML Minifier](https://www.npmjs.com/package/html-minifier) for HTML minifier.
+- [Clean CSS](https://www.npmjs.com/package/clean-css) for CSS minifier.
