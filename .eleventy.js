@@ -86,8 +86,8 @@ module.exports = function(config) {
         }
 
         return content;
-    })
-    
+    });
+
     config.addPassthroughCopy("src/**/*.jpg");
     config.addPassthroughCopy("src/**/*.webp");
     config.addPassthroughCopy("src/**/*.svg");
