@@ -1,6 +1,6 @@
 ---
 title: My PC Froze and Couldn't Turn Back On
-description: I was using my using and my PC suddenly froze and couldn't turn back on. What's the cause?
+description: I was using my PC and it suddenly froze and couldn't turn back on. What's the cause?
 date: 2024-05-31
 tags:
   - computer
