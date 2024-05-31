@@ -32,7 +32,7 @@ Meanwhile, me and my parents were figuring out what was the actual cause of this
 
 Once it was in the repair shop, my father called me and he said that a technician had tried booting up my PC, and yes, it had booted up like normal — same as what I found. But I also told my father that it would froze and not be able to turn back on after using it for a while. The technician, then, took off the CPU cooler, and jackpot.
 
-The thermal paste applied to the CPU was dried out, causing the CPU to constantly overheat and shut itself down. Thus, they applied the new thermal paste to my poor CPU, and that should be good to go. Previously, I also requested my father to by a new SSD for me, which was 512GB. Additionally, my father requested the technician to change the CMOS battery as well.
+The thermal paste applied to the CPU was dried out, causing the CPU to constantly overheat and shut itself down. Thus, they applied the new thermal paste to my poor CPU, and that should be good to go. Previously, I also requested my father to buy a new SSD for me, which was 512GB. Additionally, my father requested the technician to change the CMOS battery as well.
 
 ![The interior of my PC with its CPU getting its new thermal paste](thermal.jpg "The technician applying thermal paste to my CPU.")
 
