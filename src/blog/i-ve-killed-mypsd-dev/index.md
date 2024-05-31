@@ -1,5 +1,5 @@
 ---
-title: I've killed mypsd.dev
+title: I've Killed mypsd.dev
 description: I did it; I killed mypsd.dev
 date: 2024-05-28
 tags:
