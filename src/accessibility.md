@@ -4,7 +4,6 @@ description: About Accessibility of NaiNonTheN00b1's Website
 layout: "Article.njk"
 date: Last Modified
 timeDescription: Last Updated since
-eleventyExcludeFromCollections: true
 ---
 
 **NOTE:** As this website can be updated in the future, please expect a change on this page.
