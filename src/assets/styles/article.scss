@@ -9,7 +9,7 @@ article {
         text-align: center;
     }
 }
-article > *:not(figure) {
+article > *:not(figure, blockquote) {
     max-width: 45rem;
     margin-inline: auto;
 }
@@ -46,6 +46,12 @@ table {
     tr:nth-child(even) td {
         background: rgb(var(--base));
     }
+}
+blockquote {
+    max-width: 38rem;
+    margin: 1em auto;
+    padding: 1em;
+    border-inline: 1px solid currentColor;
 }
 @media only print {
     html {
