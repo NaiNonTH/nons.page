@@ -182,15 +182,21 @@ footer {
         }
     }
 }
-a img {
-    transition: filter 0.2s;
-}
-a:hover img {
-    filter: brightness(1.2);
+a {
+    img {
+        transition: filter 0.2s;
+    }
+    &:hover img {
+        filter: brightness(1.2);
+    }
 }
 a,
 abbr[title] {
     text-decoration: none;
+}
+abbr[title] {
+    cursor: help;
+    border-bottom: 1px dashed;
 }
 abbr[title]::after {
     content: attr(title);
@@ -226,10 +232,6 @@ code {
     @extend %scheme-dark;
     font-size: 0.925em;
     padding: 0.175em;
-}
-abbr[title] {
-    cursor: help;
-    border-bottom: 1px dashed;
 }
 button {
     font: inherit;
