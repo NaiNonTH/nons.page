@@ -9,6 +9,7 @@ timeDescription: Last Updated since
 ## Medias
 
 - [Planet Minecraft SVG Logo](https://www.planetminecraft.com/blog/planet-minecraft-svg-logo/) by [CMD-Golem](https://www.planetminecraft.com/member/cmd-golem/).
+- [Info Logo](https://github.com/icons8/windows-10-icons) by icons8
 
 ## Tools Used
 
