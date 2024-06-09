@@ -7,7 +7,7 @@ timeDescription: false
 
 ## What is this?
 
-This is the **Archive page**: the page that collects documents from the Devsite that is (about to) shut down and source code from my old websites like Neocities website and the Devsite.
+This is the **Archive page**: the page that collects documents from the Devsite that has already been shut down and source code from my old websites like Neocities website and the Devsite.
 
 I'll be frank, I feel ashamed for this. But hey, it is for the history, at least.
 
