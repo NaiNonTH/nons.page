@@ -3,7 +3,7 @@ title: I've Killed mypsd.dev
 description: I did it; I killed mypsd.dev
 date: 2024-05-28
 tags:
-  - binary
+  - webdev
 ---
 
 From [the last post](/blog/a-fresh-start-with-11ty), I've stated that I wanted a website that is in-between the Devsite — which is what **mypsd.dev** is — and my Neocities website. The time when this current website went live, those website are still active. But I, later then, killed them.

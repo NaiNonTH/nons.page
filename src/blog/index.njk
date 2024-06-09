@@ -49,10 +49,6 @@ permalink: "/blog/page/{{ pagination.pageNumber + 1 }}/"
                     <time datetime="{{ post.date | formatDateSlug }}">
                         {{ post.date | formatDate }}
                     </time>
-                    in
-                    <b>
-                        {{ tagAlias[post.data.tags[1]] if tagAlias[post.data.tags[1]] else post.data.tags[1] }}
-                    </b>
                 </i>
             </article>
         </a>
