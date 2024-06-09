@@ -1,5 +1,6 @@
 {
     "date": "Last Modified",
+    "topic": "Blog",
     "tags": "blog",
     "layout": "Article.njk",
     "metas": {

@@ -21,7 +21,15 @@
         <link rel="stylesheet" href="{{ "/assets/styles/" + style + ".css" | cacheBust}}">
     {% endfor %}
     <noscript><link rel="stylesheet" href="/assets/styles/noscript.css"></noscript>
-    <title>{{ title if page.url === "/" else title + " | NaiNonTheN00b1" }}</title>
+    <title>
+        {% if page.url === "/" %}
+            {{ title }}
+        {% elif topic %}
+            {{ title }} | {{ topic }} | NaiNonTheN00b1
+        {% else %}
+            {{ title }} | NaiNonTheN00b1
+        {% endif %}
+    </title>
 </head>
 <body>
     {% include "Header.njk" %}
