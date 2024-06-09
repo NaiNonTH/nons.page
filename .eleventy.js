@@ -14,6 +14,9 @@ module.exports = function(config) {
         async: true
     }));
 
+    config.addFilter("cacheBust", function(url) {
+        return url + `?t=${Date.now()}`;
+    })
     config.addFilter("formatDateSlug", function(dateFormat) {
         return `${dateFormat.getFullYear()}-${dateFormat.getMonth().toString().padStart(2, "0")}-${dateFormat.getDate().toString().padStart(2, "0")}`
     });
