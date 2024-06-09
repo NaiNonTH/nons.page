@@ -16,9 +16,9 @@
         <link rel="alternate" type="application/rss+xml" href="{{ rss.href }}" title="{{ rss.title }}">
     {% endif %}
     <link rel="shortcut icon" href="/assets/images/avatar.webp" type="image/x-icon">
-    <link rel="stylesheet" href="/assets/styles/main.css">
+    <link rel="stylesheet" href="{{ "/assets/styles/main.css" | cacheBust }}">
     {% for style in styles %}
-        <link rel="stylesheet" href="/assets/styles/{{ style }}.css">
+        <link rel="stylesheet" href="{{ "/assets/styles/" + style + ".css" | cacheBust}}">
     {% endfor %}
     <noscript><link rel="stylesheet" href="/assets/styles/noscript.css"></noscript>
     <title>{{ title if page.url === "/" else title + " | NaiNonTheN00b1" }}</title>
