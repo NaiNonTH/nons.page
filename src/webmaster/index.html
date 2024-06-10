@@ -2,8 +2,31 @@
 title: Webmaster
 description: Learn a little more about my personal information like Nickname, MDNI, Tools Uses, etc.
 layout: "Main.njk"
+date: Last Modified
 styles:
   - webmaster
+uses:
+  - name: Vivaldi
+    href: https://vivaldi.com
+    icon: vivaldi.svg
+  - name: Windows 11
+    href: https://windows.com
+    icon: windows.svg
+  - name: GitHub
+    href: https://github.com
+    icon: github.svg
+  - name: SearX
+    href: https://searx.space
+    icon: searx.svg
+  - name: Caesium
+    href: https://saerasoft.com/caesium
+    icon: caesium.svg
+  - name: Gmail
+    href: https://gmail.com
+    icon: gmail.svg
+  - name: Startpage
+    href: https://startpage.com
+    icon: startpage.svg
 ---
 
 <section id="s-1" aria-labelledby="about-me">
@@ -54,33 +77,14 @@ styles:
 </section>
 <section id="s-4" aria-labelledby="uses">
     <h2 id="uses">Uses</h2>
-    <table>
-        <tbody>
-            <tr>
-                <th>Browsers:</th>
-                <td><a href="https://vivaldi.com">Vivaldi</a></td>
-            </tr>
-            <tr>
-                <th>Code Editor:</th>
-                <td><a href="https://code.visualstudio.com">VSCode</a></td>
-            </tr>
-            <tr>
-                <th>OS:</th>
-                <td>Windows 11</td>
-            </tr>
-            <tr>
-                <th>Search Engine:</th>
-                <td><a href="https://startpage.com">Startpage</a> or <a href="https://github.com/searxng/searxng">SearX</a></td>
-            </tr>
-            <tr>
-                <th>E-mail Service:</th>
-                <td>Gmail</td>
-            </tr>
-            <tr>
-                <th>Image Compressor:</th>
-                <td><a href="https://saerasoft.com/caesium">Caesium</a></td>
-            </tr>
-        </tbody>
-    </table>
-    <i>Last updated: 2nd June, 2024</i>
+    <ul>
+        {% for use in uses %}
+            <li>
+                <a target="_blank" class="btn" href="{{ use.href }}" title="{{ use.name }}">
+                    <img height="36" src="{{ use.icon }}" alt="{{ use.name }} Icon">
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+    <i>Last updated: {{ page.date | formatDate }}</i>
 </section>
