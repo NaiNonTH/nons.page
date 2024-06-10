@@ -99,7 +99,8 @@ module.exports = function(config) {
 
     return {
         dir: {
-            input: "src"
+            input: "src",
+            output: (process.env.SERVE_MODE === "true") ? "_dev" : "_site"
         }
     }
 }

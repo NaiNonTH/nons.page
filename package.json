@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "bunx eleventy",
-    "serve": "bunx eleventy --serve"
+    "serve": "SERVE_MODE=true bunx eleventy --serve"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
