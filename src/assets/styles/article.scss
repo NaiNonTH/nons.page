@@ -8,10 +8,26 @@ article {
         max-height: 24em;
         text-align: center;
     }
-}
-article > *:not(figure, blockquote) {
-    max-width: 45rem;
-    margin-inline: auto;
+    > *:not(figure, blockquote) {
+        max-width: 45rem;
+        margin-inline: auto;
+    }
+    table {
+        margin-block: 2.5em;
+        overflow-x: auto;
+        border-bottom: 1px solid rgb(var(--box));
+    
+        th, td {
+            padding: 0.5em;
+        }
+        th {
+            @extend %scheme-light-contrast;
+            font-size: 1.125em;
+        }
+        tr:nth-child(even) td {
+            background: rgb(var(--base));
+        }
+    }
 }
 i {
     display: block;
@@ -30,22 +46,6 @@ figure {
 figcaption {
     text-align: center;
     font-size: 0.85em;
-}
-table {
-    margin-block: 2.5em;
-    overflow-x: auto;
-    border-bottom: 1px solid rgb(var(--box));
-
-    th, td {
-        padding: 0.5em;
-    }
-    th {
-        @extend %scheme-light-contrast;
-        font-size: 1.125em;
-    }
-    tr:nth-child(even) td {
-        background: rgb(var(--base));
-    }
 }
 blockquote {
     max-width: 38rem;

@@ -161,8 +161,12 @@ footer {
         list-style: none;
         padding: 0;
     }
-    div {
-        padding: 0.5em 2em 1em;
+    > div {
+        padding: 0.5em 1em 1em 2em;
+
+        > * {
+            margin-bottom: 1em;
+        }
     }
     nav {
         margin-left: auto;
@@ -258,6 +262,25 @@ hr {
     border: none;
     height: 1px;
     background: currentColor;
+}
+table.no-thead th {
+    white-space: nowrap;
+    vertical-align: baseline;
+    padding-right: 1.5em;
+    text-align: left;
+}
+summary {
+    cursor: default;
+    padding: 0.5em;
+    margin: 1em 0;
+    border-bottom: 1px solid;
+
+    &:hover {
+        background: linear-gradient(
+            transparent,
+            #ffffff32
+        );
+    }
 }
 
 @media (prefers-color-scheme: dark) {
