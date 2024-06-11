@@ -34,11 +34,11 @@
     </title>
 </head>
 <body>
-    {% include "Header.njk" %}
+    {% include "./components/Header.njk" %}
     <main>
         {% block main %}{% endblock %}
     </main>
-    {% include "Footer.njk" %}
+    {% include "./components/Footer.njk" %}
     <script async src="/assets/scripts/main.js"></script>
     {% for script in scripts %}
         <script async src="/assets/scripts/{{ script }}.js"></script>
