@@ -67,39 +67,29 @@ header {
     filter: drop-shadow(0 0.15em 0.25em #00000073);
 }
 header {
-    label {
-        display: none;
-    
-        @extend %navigations-anchors;
-        margin-left: auto;
-        text-align: right;
-        width: fit-content;
-    
-        &:hover, #menu-btn:checked ~ & {
-            @extend %scheme-light;
-        }
-    }
     nav {
         @extend %site-wrapper;
         --avatar-size: 100px;
         margin-top: 2em;
+        min-height: 3.25em;
 
         ul {
             @extend %navigations;
             margin-left: calc(var(--avatar-size) + 2em);
 
-            a {
+            a,
+            button {
                 @extend %navigations-anchors;
             }
-            a:is(:hover, [aria-current="true"]) {
+            :is(a, button):is(:hover, [aria-current="true"]) {
                 @extend %scheme-light;
+            }
+            button {
+                margin-left: auto;
+                border-radius: 0;
             }
         }
     }
-}
-#menu-btn {
-    @extend %absolute;
-    opacity: 0;
 }
 .avatar {
     @extend %absolute;
@@ -305,15 +295,13 @@ summary {
         transition-duration: 0s !important;
     }
 }
+@media (min-width: calc(48rem + 1px)) {
+    nav .mobile {
+        display: none;
+    }
+}
 @media (max-width: 48rem) {
     header {
-        label {
-            display: block;
-
-            &::before {
-                content: "Open ";
-            }
-        }
         nav {
             --avatar-size: 80px;
             margin-top: 0;
@@ -324,22 +312,17 @@ summary {
 
                 position: absolute;
                 z-index: 1;
-                bottom: 0;
+                top: 0;
                 right: 0;
-                transform: translateY(100%);
-                margin: 0;
-                display: none;
 
                 flex-direction: column;
             }
-        }
-    }
-    #menu-btn:checked {
-        ~ label::before {
-            content: "Close ";
-        }
-        ~ ul {
-            display: flex;
+            li:not(.mobile) {
+                display: none;
+            }
+            ul:is(:hover, :focus-within) li {
+                display: block;
+            }
         }
     }
     .avatar {
