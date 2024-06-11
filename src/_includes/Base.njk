@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noai">
     <meta name="robots" content="noimageai">
+    {% set eleventyVersion = pkg.devDependencies["@11ty/eleventy"] %}
+    <meta name="generator" content="Eleventy {{ eleventyVersion.slice(1, eleventyVersion.length) }}">
     {% if thumbnail %}
         <meta name="og:image" content="{{ (page.url + thumbnail) | absoluteUrl(global.baseURL) }}">
     {% endif %}
