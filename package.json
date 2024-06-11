@@ -2,13 +2,14 @@
   "name": "personal-site",
   "private": true,
   "scripts": {
-    "build": "bunx eleventy",
+    "build": "bunx eleventy && cd _site && bestzip ../site.zip *",
     "serve": "SERVE_MODE=true bunx eleventy --serve"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@types/bun": "latest",
+    "bestzip": "^2.2.1",
     "clean-css": "^5.3.3",
     "html-minifier": "^4.0.0",
     "markdown-it-image-figures": "^2.1.1",
