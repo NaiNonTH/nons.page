@@ -6,7 +6,7 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const CleanCSS = require("clean-css");
 
 module.exports = function(config) {
-	config.addPlugin(pluginRss);
+    config.addPlugin(pluginRss);
 
     config.amendLibrary("md", (markdownIt) => markdownIt.use(mdImplicitFigures, {
         figcaption: true,
