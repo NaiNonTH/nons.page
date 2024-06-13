@@ -4,6 +4,14 @@ main > *:not(noscript) {
 noscript {
     font-size: 1.25em;
     grid-column: 4 / span 8;
+
+    p {
+        border-left: 0.35em solid red;
+        background: #800;
+        color: #fff;
+        text-align: center;
+        padding: 0.5em 1em;
+    }
 }
 legend {
     font-size: 1.125em;
