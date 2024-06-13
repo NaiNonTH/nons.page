@@ -5,6 +5,27 @@ layout: "Main.njk"
 date: Last Modified
 styles:
   - webmaster
+socials:
+  - title: GitHub,
+    branding: "#1F2328"
+    href: https://github.com/NaiNonTH
+    logo: github.svg
+  - title: osu!
+    branding: "#FF66AA"
+    href: https://osu.ppy.sh/users/17144141
+    logo: osu.svg
+  - title: Planet Minecraft
+    branding: "#3DA2FF"
+    href: https://www.planetminecraft.com/member/nainonthen00b1/
+    logo: pmc.svg"
+  - title: "Monkeytype"
+    branding: "#323437"
+    href: https://monkeytype.com/profile/NaiNonTheN00b1
+    logo: monkeytype.svg
+  - title: Ko-Fi
+    branding: "#FF5E5B"
+    href: https://ko-fi.com/nainonthen00b1
+    logo: kofi.svg"
 uses:
   - name: Vivaldi
     href: https://vivaldi.com
@@ -67,7 +88,7 @@ uses:
 <section id="s-2" aria-label="Links">
     {% for social in socials %}
         <a class="not-text" target="_blank" title="{{ social.title }}" style="--branding: {{ social.branding }}" href="{{ social.href }}">
-            <img src="{{ social.logo }}" draggable="false" width="32" height="32" alt="{{ social.title }}">
+            <img src="socials/{{ social.logo }}" draggable="false" width="32" height="32" alt="{{ social.title }}">
         </a>
     {% endfor %}
 </section>
@@ -81,7 +102,7 @@ uses:
         {% for use in uses %}
             <li>
                 <a target="_blank" class="btn" href="{{ use.href }}" title="{{ use.name }}">
-                    <img height="36" src="{{ use.icon }}" alt="{{ use.name }} Icon">
+                    <img height="36" src="uses/{{ use.icon }}" alt="{{ use.name }} Icon">
                 </a>
             </li>
         {% endfor %}
