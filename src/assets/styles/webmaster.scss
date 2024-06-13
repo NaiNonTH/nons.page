@@ -15,7 +15,7 @@ section {
         margin: 0;
         grid-column: span 2;
     }
-    @media (max-width: 36em) {
+    @media (max-width: 32em) {
         picture {
             display: none;
         }
@@ -32,7 +32,7 @@ section {
 
         min-height: 4.5em;
         position: relative;
-        flex: 1 1 6em;
+        flex: 1 1 5.5em;
         background: var(--branding);
 
         transition: box-shadow 0.2s;
@@ -55,7 +55,7 @@ section {
 }
 #s-3 {
     grid-column: 2 / span 4;
-
+    
     @media (min-width: calc(62.5rem + 1px)) {
         align-self: start;
     }
