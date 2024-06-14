@@ -83,6 +83,13 @@ buttons:
   - name: softteddypaws
     button: softteddypaws.gif
     href: https://softteddypaws.neocities.org
+websites:
+  - name: cupid
+    href: https://cupid.nekoweb.org
+  - name: kakotheris
+    href: https://kakotheris.nekoweb.org
+  - name: Motherfucking Website
+    href: https://motherfuckingwebsite.com
 articles:
   - title: The Deception of "Buying" Digital Movies
     author: Matthew
@@ -99,11 +106,23 @@ articles:
 <div class="left">
     <section aria-labelledby="buttons" id="s-1">
         <h2 id="buttons">Buttons</h2>
+        <ul>
         {% for button in buttons %}
-            <a target="_blank" class="not-text" href="{{ button.href }}" title="{{ button.name }}">
-                <img loading="lazy" decoding="async" width="88" height="31" src="{{ button.button }}" alt="A button of {{ button.name }} website">
-            </a>
+            <li>
+                <a target="_blank" class="not-text" href="{{ button.href }}" title="{{ button.name }}">
+                    <img loading="lazy" decoding="async" width="88" height="31" src="{{ button.button }}" alt="A button of {{ button.name }} website">
+                </a>
+            </li>
         {% endfor %}
+        </ul>
+    </section>
+    <section aria-labelledby="websites" id="s-4">
+        <h2 id="websites">Websites</h2>
+        <ul>
+            {% for website in websites %}
+                <li><a href="{{ website.href }}">{{ website.name }}</a></li>
+            {% endfor %}
+        </ul>
     </section>
     <section aria-labelledby="channels" id="s-3">
         <h2 id="channels">Video Creators</h2>
