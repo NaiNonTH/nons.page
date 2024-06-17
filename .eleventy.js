@@ -5,6 +5,17 @@ const mdImplicitFigures = require("markdown-it-image-figures");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const CleanCSS = require("clean-css");
 
+function minifyjs(inputContent) {
+    const minified = uglifyjs.minify(inputContent, {
+        toplevel: true,
+        mangle: {
+            toplevel: true
+        }
+    });
+
+    return minified;
+}
+
 module.exports = function(config) {
     config.addPlugin(pluginRss);
 
@@ -44,19 +55,10 @@ module.exports = function(config) {
         compile: async function (_, inputPath) {
             if (inputPath.split("/").at(-1).startsWith("_")) return;
 
-            const compiled = await sass.compileAsync(inputPath, { charset: "UTF-8" });
-            const minified =
-                new CleanCSS({
-                    level: 2,
-                    compatibility: {
-                        colors: {
-                            hexAlpha: true
-                        }
-                    },
-                }).minify(compiled.css);
+            const { css } = await sass.compileAsync(inputPath, { charset: "UTF-8" });
 
             return () => {
-                return minified.styles;
+                return css;
             };
         }
     });
@@ -64,28 +66,42 @@ module.exports = function(config) {
     config.addTemplateFormats("js");
     config.addExtension("js", {
         outputFileExtension: "js",
-        compile: async function (inputContent) {
-            const minified = uglifyjs.minify(inputContent, {
-                toplevel: true,
-                mangle: {
-                    toplevel: true
-                }
-            });
-
+        compile: function (inputContent) {
             return () => {
-                return minified.code;
+                return minifyjs(inputContent).code;
             }
         }
     })
 
     config.addTransform("htmlmin", function(content) {
-        if ((this.page.outputPath || "").endsWith(".html")) {
+        const fileExtension = this.page.outputPath || "";
+
+        if (fileExtension.endsWith(".html") || fileExtension.endsWith(".xml")) {
             let minified = htmlmin.minify(content, {
                 collapseWhitespace: true,
                 removeComments: true
             })
-            
+
             return minified;
+        }
+        else if (fileExtension.endsWith(".css")) {
+            // Ignore the one that is a library. Fell into a pitfall because of not adding this bleh
+            if (this.page.inputPath.split("/").at(-1).startsWith("_")) 
+                return content;
+
+            const { styles } = new CleanCSS({
+                    level: 2,
+                    compatibility: {
+                        colors: {
+                            hexAlpha: true
+                        }
+                    },
+                }).minify(content);
+
+            return styles;
+        }
+        else if (fileExtension.endsWith(".js")) {
+            return minifyjs(content).code;
         }
 
         return content;
