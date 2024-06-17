@@ -62,7 +62,7 @@
     
                     if (prop.endsWith("_at")) {
                         const date = new Date(value);
-                        value = `${date.getDate().toString().padStart(2, "0")}/${date.getMonth().toString().padStart(2, "0")}/${date.getFullYear()}`
+                        value = `${date.getDate().toString().padStart(2, "0")}/${(date.getMonth() + 1).toString().padStart(2, "0")}/${date.getFullYear()}`
                     }
     
                     siteInfo.insertAdjacentHTML("beforeend", `<tr><th>${topic}</th><td>${value}</td></tr>`);
