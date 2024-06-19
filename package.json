@@ -12,6 +12,7 @@
     "bestzip": "^2.2.1",
     "clean-css": "^5.3.3",
     "html-minifier": "^4.0.0",
+    "markdown-it-anchor": "^9.0.1",
     "markdown-it-image-figures": "^2.1.1",
     "sass": "^1.77.4",
     "uglify-js": "^3.18.0"

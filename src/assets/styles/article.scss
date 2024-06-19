@@ -53,6 +53,9 @@ blockquote {
     padding: 1em;
     border-inline: 1px solid currentColor;
 }
+*:not(:hover) .header-anchor:not(:focus) {
+    opacity: 0;
+}
 @media only print {
     html {
         font-family: Arial, Helvetica, sans-serif;

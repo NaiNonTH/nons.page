@@ -4,6 +4,7 @@ const htmlmin = require("html-minifier");
 const mdImplicitFigures = require("markdown-it-image-figures");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const CleanCSS = require("clean-css");
+const mdAnchor = require("markdown-it-anchor");
 
 function minifyjs(inputContent) {
     const minified = uglifyjs.minify(inputContent, {
@@ -19,6 +20,15 @@ function minifyjs(inputContent) {
 module.exports = function(config) {
     config.addPlugin(pluginRss);
 
+    config.amendLibrary("md", (markdownIt) => markdownIt.use(mdAnchor, {
+        level: 2,
+        tabIndex: false,
+        slugify: (text) => text.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, ""),
+        permalink: mdAnchor.permalink.linkInsideHeader({
+            symbol: "§",
+            ariaHidden: true
+        })
+    }))
     config.amendLibrary("md", (markdownIt) => markdownIt.use(mdImplicitFigures, {
         figcaption: true,
         lazy: true,
