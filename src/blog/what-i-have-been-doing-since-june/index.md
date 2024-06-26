@@ -39,6 +39,8 @@ But what's the whole purpose here? I don't know—I only made it because it's fu
 
 If you've visited my Neocities website before, you might have seen the [terminal](https://nainonth.neocities.org/terminal) that I made, right? Well, since I had moved to Nekoweb, I just left it there without updating it. And now, I think it's time to recreate a new and better one.
 
+![My Neocities Terminal](terminal.png "My Neocities Terminal")
+
 For this new terminal, I'm going to reimplement most of what my old terminal has, like how you can view, create, write, run, and remove files. However, I also plan to remove certain commands like `date`, as we can use `eval Date()` instead and `curl`, since it only works when CORS Policy allows to perform any HTTP request outside the site.
 
 In the meantime, I'm also going to make a new `swatch` command, which display the current [Swatch Internet Time](http://www.swatchclock.com/about.php), an another cool way to view online time. I also plan to add directories too, but it's quite a pain to implement, so I'm not sure if this idea would go live in production.
@@ -65,13 +67,19 @@ As you can see, the Operating Systems I've tried here are a "just works" kind of
 
 Pop!_OS is the first Linux Distro I've ever tried. The killing feature is its Launcher menu that allows me to switch apps easily using only keyboard—easier than <kbd>Alt</kbd>+<kbd>Tab</kbd> on Windows. It also comes with an auto Tile Windows option too. It's an operating system that sits between an existing mouse-based control and a faster keyboard control. Its Pop!_Shop also comes with a lot of apps, including [Steam](https://store.steampowered.com).
 
+![A screenshot of Pop!_OS](popos.jpg "A screenshot of Pop!_OS")
+
 ### Fedora
 
 After that, it's Fedora. I would say that Fedora is a little bit harder distro to use compared to other distros mentioned on the list above, due to the lacking of apps in its store. Budgie Desktop Environment isn't much keyboard-friendly as other distros mentioned, but its design is pretty nice.
 
+![A screenshot of Fedora with Budgie Desktop Environment](fedora.jpg "A screenshot of Fedora with Budgie Desktop Environment")
+
 ### Zorin
 
 Then, it's Zorin. Zorin has a very similar layout and features to Windows, with its Application Menu that resembles the Windows 7 Start Menu, although you can customize how the layout will look and feel. The keyboard experience is not so bad too, and its Software shop also has a lot of apps like Pop's.
+
+![A screenshot of Zorin](zorin.jpg "A screenshot of Zorin")
 
 I still can't find the distro that I will be moving in, so I might need to keep using Windows for now.
 
