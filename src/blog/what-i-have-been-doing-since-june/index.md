@@ -15,9 +15,9 @@ The title already said what this blog is going to be about, so let's get this to
 
 ## A Programming Language
 
-I learned about Brainfuck around months ago, and I've discovered a lot of its intepreter and compiler made using a lot of programming languages. That gave me an idea of creating a programming language that can perform certain calculation, control flows, and store variables, while remaining as simple as possible.
+I learned about Brainfuck around months ago, and I've discovered a lot of its interpreter and compiler made using a lot of programming languages. That gave me an idea of creating a programming language that can perform certain calculation, control flows, and store variables, while remaining as simple as possible.
 
-So I came up with an idea of [Sign](https://github.com/NaiNonTH/sign-lang), a programming language that performs calculation through signs and its group, with the instructor that will tell the intepreter what to do with the value. It is written in [JavaScript](https://developer.mozilla.org/en-US/docs/Glossary/JavaScript) with [Bun](https://bun.sh) as a development runtime.
+So I came up with an idea of [Sign](https://github.com/NaiNonTH/sign-lang), a programming language that performs calculation through signs and its group, with the instructor that will tell the interpreter what to do with the value. It is written in [JavaScript](https://developer.mozilla.org/en-US/docs/Glossary/JavaScript) with [Bun](https://bun.sh) as a development runtime.
 
 You can try it out now by installing the interpreter from [npm](https://npmjs.org/sign-lang), which already has 99 downloads at the time of writing, and I don't know how.
 
@@ -49,7 +49,7 @@ The terminal is still in development and not visible to public.
 
 ## Trying Out Linux
 
-You might have seem my Uses section in my [Webmaster](/webmaster/) page that I've been trying to degoogle myself for the favor of more privacy-focused alternatives, especially on Search Engines. This, however, also includes Microsoft in the mix, as its Windows sends (and may collect) data to their server.
+You might have seen my Uses section in my [Webmaster](/webmaster/) page that I've been trying to degoogle myself in favor of more privacy-focused alternatives, especially on Search Engines. This, however, also includes Microsoft in the mix, as its Windows sends (and may collect) data to its server.
 
 Moreover, Microsoft is getting a lot more skeptical day by day for its strong push of Copilot and AI things combined with the fact that it's forcing every product into users like requiring users to sign up to a Microsoft account to use Windows, banners that are being shown to users, begging them to move to Windows 11, and its choices of getting rid of other stuff that seems not make its money. Not to mention of what it has done to my beloved game like Minecraft.
 
