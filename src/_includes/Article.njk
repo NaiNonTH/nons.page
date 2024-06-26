@@ -6,11 +6,18 @@ styles:
 {% extends "_Base.njk" %}
 {% block main %}
     <article>
-        <h1>{{ title }}</h1>
-        {% if timeDescription %}
-          <i>{{ timeDescription }} <time datetime="{{ page.date | formatDateSlug }}">{{ page.date | formatDate }}</time></i>
-        {% endif %}
-        <hr>
+        <header>
+            <h1>{{ title }}</h1>
+            {% if timeDescription %}
+                <aside>
+                    {{ timeDescription }}
+                    <time datetime="{{ page.date | formatDateSlug }}">{{ page.date | formatDate }}</time>
+                    <abbr title="Last Updated: {% lastModifiedDate page.inputPath %}">
+                        <svg width="24" height="24" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" fill="none" stroke="currentColor" stroke-width=".8" style="stroke-width:.75;stroke-dasharray:none" r="3.125"/><rect x="3.625" y="3.563" width=".75" height="2.25" ry="0" fill="currentColor" style="stroke-width:.999998"/><circle cx="4" cy="2.688" fill="currentColor" r=".438" style="stroke-width:1"/></svg>
+                    </abbr>
+                </aside>
+            {% endif %}
+        </header>
         {{ content | safe }}
     </article>
 {% endblock %}
