@@ -15,9 +15,7 @@ The title already said what this blog is going to be about, so let's get this to
 
 ## A Programming Language
 
-<aside>
-    <p>I learned about Brainfuck around months ago, and I've discovered a lot of its intepreter and compiler made using a lot of programming languages. That gave me an idea of creating a programming language that can perform certain calculation, control flows, and store variables, while remaining as simple as possible.</p>
-</aside>
+I learned about Brainfuck around months ago, and I've discovered a lot of its intepreter and compiler made using a lot of programming languages. That gave me an idea of creating a programming language that can perform certain calculation, control flows, and store variables, while remaining as simple as possible.
 
 So I came up with an idea of [Sign](https://github.com/NaiNonTH/sign-lang), a programming language that performs calculation through signs and its group, with the instructor that will tell the intepreter what to do with the value. It is written in [JavaScript](https://developer.mozilla.org/en-US/docs/Glossary/JavaScript) with [Bun](https://bun.sh) as a development runtime.
 
