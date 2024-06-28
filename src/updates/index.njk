@@ -16,9 +16,11 @@ permalink: "/updates/"
         <a class="btn" href="/updates/feed.xml">Subscribe via RSS</a>
     </div>
     {% for update in collections.updates | reverse %}
-        <article>
-            <h2>Update: {{ update.date | formatDate }}</h2>
-            {{ update.content | safe }}
-        </article>
+        {% if update.data.isNotData %}
+            <article>
+                <h2>Update: {{ update.date | formatDate }}</h2>
+                {{ update.content | safe }}
+            </article>
+        {% endif %}
     {% endfor %}
 </div>

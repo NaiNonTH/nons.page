@@ -20,15 +20,17 @@ eleventyComputed:
         <description>{{ metadata.subtitle }}</description>
         <language>{{ metadata.language }}</language>
         {%- for post in collections.updates | reverse %}
-        {%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
-        <item>
-            <title>Update: {{ post.date | formatDate }}</title>
-            <link href="{{ "/updates/" | absoluteUrl(metadata.url) }}" rel="self" type="application/rss+xml" />
-            <description>{{ post.content | htmlToAbsoluteUrls(absolutePostUrl) }}</description>
-            <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
-            <dc:creator>{{ metadata.author }}</dc:creator>
-            <guid>{{ "/updates/" | absoluteUrl(metadata.url) }}</guid>
-        </item>
+            {% if post.data.isNotData %}
+                {%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
+                <item>
+                    <title>Update: {{ post.date | formatDate }}</title>
+                    <link href="{{ "/updates/" | absoluteUrl(metadata.url) }}" rel="self" type="application/rss+xml" />
+                    <description>{{ post.content | htmlToAbsoluteUrls(absolutePostUrl) }}</description>
+                    <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
+                    <dc:creator>{{ metadata.author }}</dc:creator>
+                    <guid>{{ "/updates/" | absoluteUrl(metadata.url) }}</guid>
+                </item>
+            {% endif %}
         {%- endfor %}
     </channel>
 </rss>
