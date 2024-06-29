@@ -207,7 +207,7 @@ abbr[title] {
 abbr[title] {
     cursor: help;
     border-bottom: 1px dashed;
-    vertical-align: top;
+    vertical-align: middle;
 }
 abbr[title]::after {
     content: attr(title);
