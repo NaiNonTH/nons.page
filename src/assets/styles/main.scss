@@ -29,21 +29,35 @@ html[theme="broken-hoe"] {
     --fg-prominence: var(--base);
     --fg-base: var(--prominence);
     --fg-box: 0, 0, 0;
-
+    
     color-scheme: only light;
+}
+html[theme="bedtime"],
+html[theme="mono"] {
+    --hyperlinked: 255, 227, 135;
+    --prominence-hyperlinked: var(--hyperlinked);
+    
+    color-scheme: only dark;
 }
 html[theme="bedtime"] {
     --box: 75, 75, 134;
     --base: 40, 40, 60;
     --base-accent: 45, 45, 75;
     --prominence: 25, 25, 35;
-    --hyperlinked: 255, 227, 135;
 
     --fg-prominence: 210, 210, 255;
     --fg-base: var(--fg-prominence);
     --fg-box: 235, 235, 240;
+}
+html[theme="mono"] {
+    --box: var(--prominence);
+    --base: 0, 0, 0;
+    --base-accent: 18, 18, 18;
+    --prominence: 28, 28, 28;
 
-    color-scheme: only dark;
+    --fg-prominence: var(--fg-base);
+    --fg-base: 255, 255, 255;
+    --fg-box: var(--fg-base);
 }
 
 *,
