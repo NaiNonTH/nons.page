@@ -91,38 +91,48 @@ module.exports = function(config) {
         }
     })
 
-    config.addTransform("htmlmin", function(content) {
-        const fileExtension = this.page.outputPath || "";
+    config.addTransform("minify", function(content) {
+        if (!this.page.outputPath) return content;
 
-        if (fileExtension.endsWith(".html") || fileExtension.endsWith(".xml")) {
-            let minified = htmlmin.minify(content, {
-                collapseWhitespace: true,
-                removeComments: true
-            })
+        const fileExtension = this.page.outputPath.split(".").pop();
 
-            return minified;
-        }
-        else if (fileExtension.endsWith(".css")) {
-            // Ignore the one that is a library. Fell into a pitfall because of not adding this bleh
-            if (this.page.inputPath.split("/").at(-1).startsWith("_")) 
+        switch (fileExtension) {
+            case "html":
+            case "xml":
+                {
+                    let minified = htmlmin.minify(content, {
+                        collapseWhitespace: true,
+                        removeComments: true
+                    })
+        
+                    return minified;
+                }
+            case "css":
+                {
+                    // Ignore the one that is a library. Fell into a pitfall because of not adding this bleh
+                    if (this.page.inputPath.split("/").at(-1).startsWith("_")) 
+                        return content;
+                
+                    const { styles } = new CleanCSS({
+                            level: {
+                                2: {
+                                    all: true
+                                }
+                            },
+                            compatibility: {
+                                colors: {
+                                    hexAlpha: true
+                                }
+                            }
+                        }).minify(content);
+                    
+                    return styles;
+                }
+            case "js":
+                return minifyjs(content).code;
+            default:
                 return content;
-
-            const { styles } = new CleanCSS({
-                    level: 2,
-                    compatibility: {
-                        colors: {
-                            hexAlpha: true
-                        }
-                    },
-                }).minify(content);
-
-            return styles;
         }
-        else if (fileExtension.endsWith(".js")) {
-            return minifyjs(content).code;
-        }
-
-        return content;
     });
 
     config.addPassthroughCopy("src/**/*.jpg");
