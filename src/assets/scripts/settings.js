@@ -16,10 +16,14 @@
     });
 
     const noMobileTooltip = document.getElementById("no-mobile-tooltip");
+    const noAnchorIndicator = document.getElementById("no-anchor-indicator");
     if (preferences["no-mobile-tooltip"])
         noMobileTooltip.checked = true;
+    if (preferences["no-anchor-indicator"])
+        noAnchorIndicator.checked = true;
 
     noMobileTooltip.addEventListener("change", () => setPreference("no-mobile-tooltip", noMobileTooltip.checked));
+    noAnchorIndicator.addEventListener("change", () => setPreference("no-anchor-indicator", noAnchorIndicator.checked));
 
     function setPreference(name, value) {
         html.setAttribute(name, value);

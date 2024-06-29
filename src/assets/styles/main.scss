@@ -184,6 +184,22 @@ a {
         filter: brightness(1.2);
     }
 }
+%indicator {
+    font-size: 0.6em;
+    position: relative;
+    left: 0.3ch;
+    bottom: 0.8ch;
+}
+html:not([no-anchor-indicator="true"]) a:not(.not-text) {
+    &[href^="http"]:not([href^="https://nons.page"])::after {
+        content: "↗";
+        @extend %indicator;
+    }
+    &[href^="#"]:not(.header-anchor)::after {
+        content: "§";
+        @extend %indicator;
+    }
+}
 a,
 abbr[title] {
     text-decoration: none;
