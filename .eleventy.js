@@ -44,7 +44,6 @@ module.exports = function(config) {
         slugify: (text) => text.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, ""),
         permalink: mdAnchor.permalink.linkInsideHeader({
             symbol: "§",
-            ariaHidden: true
         })
     }))
     config.amendLibrary("md", (markdownIt) => markdownIt.use(mdImplicitFigures, {
