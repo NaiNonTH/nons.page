@@ -1,9 +1,9 @@
-main > *:not(noscript) {
-    grid-column: span 3;
+main :not(noscript) {
+    grid-column: span 4;
 }
 noscript {
     font-size: 1.25em;
-    grid-column: 4 / span 8;
+    grid-column: 3 / span 8;
 
     p {
         border-left: 0.35em solid red;
@@ -11,6 +11,9 @@ noscript {
         color: #fff;
         text-align: center;
         padding: 0.5em 1em;
+    }
+    small {
+        font-size: 1rem;
     }
 }
 legend {
