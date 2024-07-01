@@ -41,9 +41,9 @@
         {% block main %}{% endblock %}
     </main>
     {% include "./components/Footer.njk" %}
-    <script async src="/assets/scripts/main.js"></script>
+    <script async src="{{ "/assets/scripts/main.js" | cacheBust }}"></script>
     {% for script in scripts %}
-        <script async src="/assets/scripts/{{ script }}.js"></script>
+        <script async src="{{ "/assets/scripts/" + script + ".js" | cacheBust }}"></script>
     {% endfor %}
 </body>
 </html>
