@@ -134,11 +134,9 @@ module.exports = function(config) {
         }
     });
 
-    config.addPassthroughCopy("src/**/*.jpg");
-    config.addPassthroughCopy("src/**/*.webp");
-    config.addPassthroughCopy("src/**/*.svg");
-    config.addPassthroughCopy("src/**/*.png");
-    config.addPassthroughCopy("src/**/*.gif");
+    config.addPassthroughCopy({ "src/_assets/images": "assets/images" });
+    config.addPassthroughCopy("src/[!_]*/**/*.{jpg,webp,svg,png,gif}");
+    config.addPassthroughCopy("src/*.{jpg,webp,svg,png,gif}");
 
     return {
         dir: {
