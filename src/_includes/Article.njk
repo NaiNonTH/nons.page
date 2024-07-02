@@ -20,4 +20,21 @@ styles:
         </header>
         {{ content | safe }}
     </article>
+    {# when there's a tag, there's a blog #}
+    {% if tags %}
+    <aside class="tags">
+        <hr>
+        <p>
+            <em>
+                Tagged with
+                {% set comma = joiner() %}
+                {% for tag in tags %}{% if tag != "blog" %}{{ comma() }} <a href="/blog/category/{{ tag }}">{{ tag }}</a>{% endif %}{% endfor %}
+            </em>
+        </p>
+        <p>
+            <em><a href="/blog/feed.xml">Subscribe via RSS</a></em>
+        </p>
+        {# need to write like this or there will be a space in front of the tag bleh #}
+    </aside>
+    {% endif %}
 {% endblock %}

@@ -67,6 +67,10 @@ pre {
 *:not(:hover) .header-anchor:not(:focus) {
     opacity: 0;
 }
+.tags {
+    text-align: right;
+    grid-column: 2 / span 10;
+}
 @media only print {
     html {
         font-family: Arial, Helvetica, sans-serif;
