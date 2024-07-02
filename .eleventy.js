@@ -83,7 +83,9 @@ module.exports = function(config) {
     config.addTemplateFormats("js");
     config.addExtension("js", {
         outputFileExtension: "js",
-        compile: function (inputContent) {
+        compile: function (inputContent, inputPath) {
+            if (inputPath.endsWith(".11tydata.js")) return;
+
             return () => {
                 return minifyjs(inputContent).code;
             }
