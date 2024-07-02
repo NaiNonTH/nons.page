@@ -10,11 +10,16 @@
     display: flex;
     gap: 1em;
     align-items: center;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    flex-flow: row-reverse wrap;
 
     h1 {
         font-size: 2.25em;
+    }
+    div {
+        flex: 1 1 24em;
+    }
+    picture {
+        margin: auto;
     }
     img {
         border-radius: 50%;
@@ -22,10 +27,6 @@
     }
     a {
         color: rgb(var(--prominence-hyperlinked));
-    }
-    
-    @media (max-width: 56.25em) {
-        flex-direction: column;
     }
 }
 #s-2 {
