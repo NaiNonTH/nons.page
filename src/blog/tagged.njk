@@ -19,17 +19,6 @@ permalink: "/blog/category/{{ tag }}/"
 <h1 id="blog">
     <span><code>{{ tag }}</code> Blog</span>
 </h1>
-<section aria-labelledby="tags" id="tags-section">
-    <h2 id="tags">More Tags</h2>
-    <ul>
-        {% for tag, _ in collections %}
-            {% if ["all", "blog", "updates"].includes(tag) %}
-            {% else %}
-                <li><a class="btn" href="/blog/category/{{ tag }}/">{{ tag }}</a></li>
-            {% endif %}
-        {% endfor %}
-    </ul>
-</section>
 <section aria-labelledby="blog" id="index">
     {% set tagContent = collections[tag] %}
     {% for post in tagContent | reverse %}
