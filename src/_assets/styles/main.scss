@@ -27,7 +27,7 @@ html[theme="broken-hoe"] {
     --box: 255, 255, 255;
 
     --fg-prominence: var(--base);
-    --fg-base: var(--prominence);
+    --fg-base: var(--fg-box);
     --fg-box: 0, 0, 0;
     
     color-scheme: only light;
