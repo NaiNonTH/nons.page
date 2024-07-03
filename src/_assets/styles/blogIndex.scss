@@ -21,10 +21,18 @@
     }
     @media (min-width: calc(62.5rem + 1px)) {
         margin-top: 2em;
-        align-self: start;
 
         ul {
             flex-wrap: wrap;
+        }
+    }
+}
+#index {
+    a {
+        position: relative;
+
+        &:hover {
+            z-index: 1;
         }
     }
 }
@@ -39,15 +47,6 @@ h1,
 }
 h1 {
     justify-content: space-between;
-}
-#index {
-    a:not(.btn) {
-        position: relative;
-        color: inherit;
-    }
-    a:hover {
-        z-index: 1;
-    }
 }
 article {
     @extend %scheme-light-contrast;
@@ -73,17 +72,11 @@ article {
     vertical-align: bottom;
     font-size: 0.55em;
 }
-.previous {
-    margin-bottom: 1em;
-
-    .feed {
-        margin-left: auto;
-    }
-}
+.previous,
 .next {
-    margin-top: 1em;
-
-    a {
-        margin-left: auto;
-    }
+    margin: 1em 0;
+}
+.feed,
+.next a {
+    margin-left: auto;
 }
