@@ -143,7 +143,7 @@ module.exports = function(config) {
     return {
         dir: {
             input: "src",
-            output: (process.env.SERVE_MODE === "true") ? "_dev" : "_site"
+            output: (process.env.ELEVENTY_RUN_MODE === "serve") ? "_dev" : "_site"
         }
     }
 }
