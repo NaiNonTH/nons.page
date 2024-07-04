@@ -5,6 +5,8 @@ date: 2024-05-15
 tags:
   - webdev
   - 11ty
+  - programming
+  - projects
 ---
 
 Before I made this website, I already had two old websites: my Devsite and my Neocities website. And I felt like they both were missing something. So I make a new one with a different philosophy behind it.
