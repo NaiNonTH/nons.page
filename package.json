@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "bunx eleventy && cd _site && bestzip ../site.zip *",
-    "serve": "bunx eleventy --serve"
+    "serve": "bunx eleventy --serve --incremental"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
