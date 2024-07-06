@@ -130,6 +130,12 @@ body {
         transition: filter 0.2s;
     }
 }
+:first-child {
+    margin-top: 0;
+}
+:last-child {
+    margin-bottom: 0;
+}
 main {
     @extend %site-wrapper;
     @extend %scheme-light;
@@ -140,13 +146,6 @@ main {
     display: grid;
     gap: 1.5em;
     grid-template-columns: repeat(12, 1fr);
-
-    *:first-child {
-        margin-top: 0;
-    }
-    *:last-child {
-        margin-bottom: 0;
-    }
 }
 footer {
     @extend %site-wrapper;
@@ -158,37 +157,32 @@ footer {
     margin-bottom: 3em;
     border-radius: 0 0 20px 20px;
 
-    > * {
-        min-width: fit-content;
-    }
-    ul {
-        list-style: none;
-        padding: 0;
-    }
-    > div {
+    div {
         padding: 0.5em 1em 1em 2em;
-
-        > * {
-            margin-bottom: 1em;
-        }
     }
     nav {
         margin-left: auto;
         
         ul {
+            list-style: none;
+            padding: 0;
             margin: 0;
+        }
+        a {
+            @extend %navigations-anchors;
+            border-radius: 9em 0 0 9em;
+            padding: 0.5em 2em 0.5em 1.5em;
 
-            a {
-                @extend %navigations-anchors;
-                border-radius: 9em 0 0 9em;
-                padding: 0.5em 2em 0.5em 1.5em;
-
-                &:is(:hover, [aria-current="true"]) {
-                    @extend %scheme-light;
-                }
+            &:is(:hover, [aria-current="true"]) {
+                @extend %scheme-light;
             }
         }
     }
+}
+#last-built {
+    text-align: right;
+    font-size: medium;
+    font-style: italic;
 }
 a {
     img {
@@ -296,7 +290,6 @@ table.no-thead th {
 summary {
     cursor: default;
     padding: 0.5em;
-    margin: 1em 0;
     border-bottom: 1px solid;
 
     &:hover {
