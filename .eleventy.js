@@ -136,6 +136,19 @@ module.exports = function(config) {
         }
     });
 
+    config.addGlobalData("sitesLastModified", function () {
+        return toDateString(new Date());
+    });
+    config.addGlobalData("myAge", function() {
+        const now = new Date();
+        const birthday = new Date("2005-03-21");
+
+        return {
+            age: new Date(now - birthday).getFullYear() - 1970,
+            date: toDateString(now)
+        };
+    });
+
     config.addPassthroughCopy({ "src/_assets/images": "assets/images" });
     config.addPassthroughCopy("src/[!_assets]*?/**/*.{jpg,webp,svg,png,gif}");
     config.addPassthroughCopy("src/*.{jpg,webp,svg,png,gif}");
