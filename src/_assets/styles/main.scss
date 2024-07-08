@@ -173,7 +173,8 @@ footer {
             border-radius: 9em 0 0 9em;
             padding: 0.5em 2em 0.5em 1.5em;
 
-            &:is(:hover, [aria-current="true"]) {
+            &:hover,
+            &[aria-current="true"] {
                 @extend %scheme-light;
             }
         }
@@ -236,7 +237,7 @@ abbr[title]::after {
 html:not([no-mobile-tooltip="true"]) abbr[title]:hover::after {
     transform: translateY(0);
 }
-a:not(:is(.site-header, footer) nav a, .btn, .not-text) {
+main a:not(.btn):not(.not-text) {
     color: rgb(var(--hyperlinked));
     border-bottom: 1px solid;
 
@@ -270,11 +271,14 @@ a.btn {
 
     transition: box-shadow 0.2s;
 }
-:is(a.btn, button:not([disabled])):hover {
-    box-shadow: var(--box-shadow-md);
-}
-:is(a.btn, button:not([disabled])):active {
-    transform: scale(0.95);
+a.btn,
+button:not([disabled]) {
+    &:hover {
+        box-shadow: var(--box-shadow-md);
+    }
+    &:active {
+        transform: scale(0.95);
+    }
 }
 hr {
     border: none;
@@ -343,12 +347,15 @@ summary {
                 right: 0;
 
                 flex-direction: column;
+                
+                &:focus-within {
+                    li {
+                       display: block;
+                   }
+                }
             }
             li:not(.mobile) {
                 display: none;
-            }
-            ul:is(:hover, :focus-within) li {
-                display: block;
             }
         }
     }
