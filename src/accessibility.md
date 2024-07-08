@@ -34,4 +34,4 @@ This website is compatible with both computer and portable devices with touchscr
 
 ## Browser Compatibility
 
-This website is made targeting modern web browsers — any version released since and after 2021.
+This website is made targeting modern web browsers — any version released since and after 2017.
