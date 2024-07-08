@@ -150,7 +150,7 @@ module.exports = function(config) {
     });
 
     config.addPassthroughCopy({ "src/_assets/images": "assets/images" });
-    config.addPassthroughCopy("src/[!_assets]*?/**/*.{jpg,webp,svg,png,gif}");
+    config.addPassthroughCopy("src/!(_assets)**?/**/**/*.{jpg,webp,svg,png,gif}");
     config.addPassthroughCopy("src/*.{jpg,webp,svg,png,gif}");
 
     return {
