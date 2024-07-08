@@ -65,7 +65,7 @@ Here contains:
 
 NaiNonTheN00b1, right?
 
-This title was introduced at the time when I played <abbr title="Counter-Strike: Global Offensive">CS:GO</abbr> with my online friends. It was added to my previous title: NaiNonTH, since I wanted to get rid of the Thai branding on my name. All I did was change the TH at the end into **TheN00b1** because I sucked the game (to this day).
+This title was introduced at the time when I played <abbr title="Counter-Strike: Global Offensive">CS:GO</abbr> with my online friends. It was added to my previous title: NaiNonTH, since I wanted to get rid of the Thai branding on my name. All I did was change the TH at the end into **TheN00b1** because I sucked at the game (to this day).
 
 ### What about NaiNonTH?
 
@@ -82,6 +82,7 @@ Hence, this is why I prefer you to call me Non or NaiNon, and *not* Nai.
 Here are some of my other pennames:
 
 * **NaiNonTH** - still being used today.
+* **NotNaiNonTXD** - used for my roblox display name
 * **NoncanbeZaza** - *deprecated*, but can still be found.
 * **Minekoonnon** - too old.
 * **Koonnon** - ancient.
@@ -120,7 +121,7 @@ I started playing osu! on May, 2020 from the invitation of my (not)weeb discord 
 
 ## My PC
 
-Copied from my [osu! profile page](https://osu.ppy.sh/users/17144141), here is the specification of my PC. Although it's pretty old, but it still pretty good for my daily usage and games:
+Copied from my [osu! profile page](https://osu.ppy.sh/users/17144141), here is the specification of my PC. Although it's pretty old, but it's still pretty good for my daily usage and games:
 
 * **CPU:** Intel Core i5-8400
 * **Motherboard:** ASUS PRIME B360-PLUS
