@@ -327,8 +327,11 @@ summary {
     }
 }
 @media (min-width: calc(48rem + 1px)) {
-    nav .mobile {
+    .mobile {
         display: none;
+    }
+    .settings {
+        margin-left: auto;
     }
 }
 @media (max-width: 48rem) {
@@ -372,10 +375,5 @@ summary {
         display: flex;
         flex-direction: column;
         padding: 3em 3%;
-    }
-}
-@media (min-width: calc(48rem + 1px)) {
-    .settings {
-        margin-left: auto;
     }
 }
