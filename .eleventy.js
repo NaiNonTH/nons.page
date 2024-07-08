@@ -5,6 +5,7 @@ const mdImplicitFigures = require("markdown-it-image-figures");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const CleanCSS = require("clean-css");
 const mdAnchor = require("markdown-it-anchor");
+const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const { statSync } = require("fs");
 
 function minifyjs(inputContent) {
@@ -37,6 +38,7 @@ function toDateString(dateFormat) {
 
 module.exports = function(config) {
     config.addPlugin(pluginRss);
+    config.addPlugin(EleventyHtmlBasePlugin);
 
     config.amendLibrary("md", (markdownIt) => markdownIt.use(mdAnchor, {
         level: 2,
