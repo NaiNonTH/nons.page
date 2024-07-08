@@ -1,6 +1,6 @@
 @use "mixins" as *;
 
-section {
+main > div {
     grid-column: 2 / span 10;
 }
 article {
@@ -9,10 +9,13 @@ article {
     padding: 1em;
     
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
     gap: 1em;
 
+    div {
+        flex: 1 1 24em;
+    }
     h2 {
         margin-bottom: 0.5em;
     }
