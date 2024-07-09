@@ -38,6 +38,8 @@ function toDateString(dateFormat) {
 }
 
 module.exports = function(config) {
+    const output = (process.env.ELEVENTY_RUN_MODE === "serve") ? "_dev" : "_site";
+
     config.addPlugin(pluginRss);
     config.addPlugin(EleventyHtmlBasePlugin);
     config.addPlugin(eleventyAutoCacheBuster, { hashAlgorithm: "md5" });
@@ -160,7 +162,7 @@ module.exports = function(config) {
     return {
         dir: {
             input: "src",
-            output: (process.env.ELEVENTY_RUN_MODE === "serve") ? "_dev" : "_site"
+            output
         }
     }
 }
