@@ -7,6 +7,7 @@ const CleanCSS = require("clean-css");
 const mdAnchor = require("markdown-it-anchor");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const { statSync } = require("fs");
+const eleventyAutoCacheBuster = require("eleventy-auto-cache-buster");
 
 function minifyjs(inputContent) {
     const minified = uglifyjs.minify(inputContent, {
@@ -39,29 +40,30 @@ function toDateString(dateFormat) {
 module.exports = function(config) {
     config.addPlugin(pluginRss);
     config.addPlugin(EleventyHtmlBasePlugin);
+    config.addPlugin(eleventyAutoCacheBuster, { hashAlgorithm: "md5" });
 
-    config.amendLibrary("md", (markdownIt) => markdownIt.use(mdAnchor, {
-        level: 2,
-        tabIndex: false,
-        slugify: (text) => text.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, ""),
-        permalink: mdAnchor.permalink.linkInsideHeader({
-            symbol: "§",
-        })
-    }))
-    config.amendLibrary("md", (markdownIt) => markdownIt.use(mdImplicitFigures, {
-        figcaption: true,
-        lazy: true,
-        async: true
-    }));
+    config.amendLibrary("md", (markdownIt) =>
+        markdownIt
+            .use(mdAnchor, {
+                level: 2,
+                tabIndex: false,
+                slugify: (text) => text.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, ""),
+                permalink: mdAnchor.permalink.linkInsideHeader({
+                    symbol: "§",
+                })
+            })
+            .use(mdImplicitFigures, {
+                figcaption: true,
+                lazy: true,
+                async: true
+            })
+    )
 
     config.addShortcode("lastModifiedDate", function(src) {
         const { mtime } = statSync(src);
         const dateString = toDateString(mtime);
         
         return `${dateString} (${mtime.getUTCHours().toString().padStart(2, "0")}:${mtime.getUTCMinutes().toString().padStart(2, "0")} UTC)`;
-    });
-    config.addFilter("cacheBust", function(url) {
-        return url + `?t=${Date.now()}`;
     });
     config.addFilter("formatDateSlug", function(dateFormat) {
         return `${dateFormat.getFullYear()}-${dateFormat.getMonth().toString().padStart(2, "0")}-${dateFormat.getDate().toString().padStart(2, "0")}`

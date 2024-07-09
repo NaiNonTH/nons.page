@@ -20,9 +20,9 @@
         <link rel="alternate" type="application/rss+xml" href="{{ rss.href }}" title="{{ rss.title }}">
     {% endif %}
     <link rel="shortcut icon" href="/assets/images/avatar.webp" type="image/x-icon">
-    <link rel="stylesheet" href="{{ "/assets/styles/main.css" | cacheBust }}">
+    <link rel="stylesheet" href="{{ "/assets/styles/main.css" }}">
     {% for style in styles %}
-        <link rel="stylesheet" href="{{ "/assets/styles/" + style + ".css" | cacheBust}}">
+        <link rel="stylesheet" href="{{ "/assets/styles/" + style + ".css" }}">
     {% endfor %}
     <noscript><link rel="stylesheet" href="/assets/styles/noscript.css"></noscript>
     <title>
@@ -41,9 +41,9 @@
         {% block main %}{% endblock %}
     </main>
     {% include "./components/Footer.njk" %}
-    <script async src="{{ "/assets/scripts/main.js" | cacheBust }}"></script>
+    <script async src="{{ "/assets/scripts/main.js" }}"></script>
     {% for script in scripts %}
-        <script async src="{{ "/assets/scripts/" + script + ".js" | cacheBust }}"></script>
+        <script async src="{{ "/assets/scripts/" + script + ".js" }}"></script>
     {% endfor %}
 </body>
 </html>

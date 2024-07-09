@@ -11,6 +11,7 @@
     "@types/bun": "latest",
     "bestzip": "^2.2.1",
     "clean-css": "^5.3.3",
+    "eleventy-auto-cache-buster": "^0.3.0",
     "html-minifier": "^4.0.0",
     "markdown-it-anchor": "^9.0.1",
     "markdown-it-image-figures": "^2.1.1",
