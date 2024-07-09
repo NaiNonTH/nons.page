@@ -17,7 +17,13 @@ timeDescription: Last Updated since
 
 - [11ty](https://11ty.dev) for Static Site generator.
 - [Bun](https://bun.sh) for JavaScript runtime.
+
+## Code Libraries Used
+
 - [SASS](https://sass-lang.com) for CSS Preprocessor.
 - [UglifyJS](https://www.npmjs.com/package/uglify-js) for JavaScript minifier.
 - [HTML Minifier](https://www.npmjs.com/package/html-minifier) for HTML minifier.
 - [Clean CSS](https://www.npmjs.com/package/clean-css) for CSS minifier.
+- [Eleventy Auto Cache Buster](https://www.npmjs.com/package/eleventy-auto-cache-buster) for Hashed Cache Busting.
+- [markdown-it Anchor](https://www.npmjs.com/package/markdown-it-anchor) for sectioned headings in Articles.
+- [markdown-it Implicit Figures](https://www.npmjs.com/package/@ruanyf/markdown-it-implicit-figures) for Figures and Image descriptions.
