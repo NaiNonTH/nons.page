@@ -1,11 +1,17 @@
 const sass = require("sass");
+
 const uglifyjs = require("uglify-js");
+
 const htmlmin = require("html-minifier");
-const mdImplicitFigures = require("markdown-it-image-figures");
-const pluginRss = require("@11ty/eleventy-plugin-rss");
+const xmlmin = require("xml-formatter");
 const CleanCSS = require("clean-css");
+
+const mdImplicitFigures = require("markdown-it-image-figures");
 const mdAnchor = require("markdown-it-anchor");
+
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+
 const { statSync } = require("fs");
 const eleventyAutoCacheBuster = require("eleventy-auto-cache-buster");
 
@@ -105,14 +111,20 @@ module.exports = function(config) {
 
         switch (fileExtension) {
             case "html":
-            case "xml":
                 {
                     let minified = htmlmin.minify(content, {
                         collapseWhitespace: true,
                         removeComments: true
-                    })
+                    });
         
                     return minified;
+                }
+            case "xml":
+                {
+                    return xmlmin.minify(content, { 
+                        filter: (node) => node.type !== 'Comment',
+                        collapseContent: true
+                    });
                 }
             case "css":
                 {
