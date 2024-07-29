@@ -5,7 +5,7 @@
     @extend %section-box;
 
     grid-column: 2 / span 10;
-    padding-block: 6em;
+    padding: 6em 1.5em;
 
     display: flex;
     gap: 1em;
@@ -31,67 +31,63 @@
 }
 #s-2 {
     grid-column: 2 / span 4;
-
-    display: flex;
-    align-items: center;
+    flex: 1;
+    padding: 1em;
 
     border-top: 1px solid rgb(var(--box));
     border-right: 1px solid rgb(var(--box));
     border-top-right-radius: 20px;
-    
-    padding: 2.5em 1em 2.5em 0;
 
     > * {
-        margin: 0;
-    }
-    .spacer {
-        position: relative;
-        margin-inline: 1ch 1em;
-        flex-grow: 1;
-        height: 2.25em;
-        
-        &::after {
-            content: "";
-            position: absolute;
-            top: 1.25em;
-            inset-inline: 0;
-            height: 1px;
-            border-top: 1px solid currentColor;
-        }
+        margin: auto;
     }
     ul {
-        display: flex;
-        gap: 0.5em;
-        flex-direction: column;
         list-style: none;
-        padding: 0;
+        padding-left: 0.5em;
     }
     li {
+        margin: 0.5em 0;
         position: relative;
+
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 0.5ch;
 
         &::before,
         &::after {
             content: "";
-            position: absolute;
-            left: -1em;
-            top: 50%;
+            background: currentColor;
         }
         &::before {
-            width: 1em;
-            border-top: 1px solid currentColor;
+            flex: 1;
+            height: 0.0625em;
+            min-width: 1.5em;
         }
-        &:not(:last-child)::after {
-            height: 3em;
-            border-left: 1px solid currentColor;
+        &::after {
+            position: absolute;
+            left: 0;
+            bottom: 50%;
+            height: 3.25em;
+            width: 0.0625em;
         }
+        &:first-child::after {
+            height: 1.5em;
+        }
+    }
+    a.btn {
+        min-width: -moz-fit-content;
+        min-width: fit-content;
     }
 }
 #s-3 {
     @extend %section-box;
     position: relative;
     grid-column: 6 / span 6;
-    padding: 0;
     height: 16em;
+
+    padding: 0;
+    flex: 1 1 22rem;
 
     * {
         position: absolute;
@@ -133,7 +129,6 @@
     }
     picture {
         inset: 0;
-
         transition: filter 0.2s;
     }
     img {
@@ -167,8 +162,7 @@
 }
 #s-6 {
     @extend %section-box;
-    flex: 1;
-    min-width: calc(180px + 3em);
+    padding: 0;
 
     iframe {
         display: block;
@@ -182,7 +176,7 @@
     flex-direction: column;
     justify-content: flex-end;
     min-height: 10em;
-    flex: 2 1 20em;
+    flex: 1 1 20em;
 
     h2 {
         margin-bottom: 1rem;
@@ -196,5 +190,6 @@
 
     display: flex;
     gap: 1.5em;
+    justify-content: space-evenly;
     flex-flow: row wrap;
 }

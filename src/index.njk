@@ -25,28 +25,29 @@ layout: "Main.njk"
         </p>
     </div>
 </section>
-<section id="s-2" aria-labelledby="projects">
-    <h2 id="projects">Projects</h2>
-    <span class="spacer"></span>
-    <ul>
-        <li><a class="btn" href="/minecraft/">Minecraft</a></li>
-        <li><a class="btn" target="_blank" href="https://nainonth.github.io/Bmi-Calc">Bmi-Calc</a></li>
-        <li><a class="btn" target="_blank" href="https://npmjs.org/sign-lang">Sign</a></li>
-    </ul>
-</section>
-<section id="s-3" aria-labelledby="latest-post">
-    {% set latestPost = (collections.blog | reverse)[0] %}
-    <h2 id="latest-post">Latest Post</h2>
-    <a class="not-text" href={{ latestPost.url }}>
-        <article>
-            <h3>{{ latestPost.data.title }}</h3>
-            <picture>
-                <source srcset="{{ latestPost.url + 'thumbnail.webp' }}" type="image/webp">
-                <img loading="lazy" decoding="async" src="{{ latestPost.url + 'thumbnail.jpg' }}" alt="A Thumbnail for Latest Post: {{ latestPost.data.title }}">
-            </picture>
-        </article>
-    </a>
-</section>
+<div class="sections-wrapper">
+    <section id="s-2" aria-labelledby="projects">
+        <h2 id="projects">Projects</h2>
+        <ul>
+            <li><a class="btn" href="/minecraft/">Minecraft</a></li>
+            <li><a class="btn" target="_blank" href="https://nainonth.github.io/Bmi-Calc">Bmi-Calc</a></li>
+            <li><a class="btn" target="_blank" href="https://npmjs.org/sign-lang">Sign</a></li>
+        </ul>
+    </section>
+    <section id="s-3" aria-labelledby="latest-post">
+        {% set latestPost = (collections.blog | reverse)[0] %}
+        <h2 id="latest-post">Latest Post</h2>
+        <a class="not-text" href={{ latestPost.url }}>
+            <article>
+                <h3>{{ latestPost.data.title }}</h3>
+                <picture>
+                    <source srcset="{{ latestPost.url + 'thumbnail.webp' }}" type="image/webp">
+                    <img loading="lazy" decoding="async" src="{{ latestPost.url + 'thumbnail.jpg' }}" alt="A Thumbnail for Latest Post: {{ latestPost.data.title }}">
+                </picture>
+            </article>
+        </a>
+    </section>
+</div>
 <div class="sections-wrapper">
     <section aria-label="NavLink" id="s-6">
         <iframe title="NavLink Ads" loading="lazy" width="180" height="180" style="border:none" src="https://dimden.neocities.org/navlink/"></iframe>
