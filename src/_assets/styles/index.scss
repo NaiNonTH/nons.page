@@ -163,6 +163,7 @@
 #s-6 {
     @extend %section-box;
     padding: 0;
+    border-bottom-left-radius: 0;
 
     iframe {
         display: block;
