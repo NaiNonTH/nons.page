@@ -37,7 +37,7 @@
             siteInfoBtn.innerText = "Requesting...";
             siteInfoBtn.style.opacity = 0.3;
 
-            fetch("https://nekoweb.org/api/site/info/nainonth")
+            fetch("https://nekoweb.org/api/site/info/non")
                 .then((res) => res.json())
                 .then((json) => {
                     renderSiteInfoContent(json);
