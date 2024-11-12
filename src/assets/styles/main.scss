@@ -79,7 +79,6 @@ body {
     @extend %scheme-dark;
     position: relative;
     z-index: 1;
-    filter: drop-shadow(0 0.15em 0.25em #00000073);
 }
 .site-header {
     nav {
@@ -124,7 +123,6 @@ body {
         border-radius: 50%;
         box-shadow:
             var(--active, 0 0),
-            var(--box-shadow-lg),
             0 0 0 var(--border-size) rgb(var(--prominence));
     
         transition: filter 0.2s;
@@ -268,13 +266,13 @@ a.btn {
     padding: 0.5em 1em;
 
     @extend %scheme-dark;
-
-    transition: box-shadow 0.2s;
 }
 a.btn,
 button:not([disabled]) {
     &:hover {
-        box-shadow: var(--box-shadow-md);
+        @extend %scheme-light;
+        outline: 2px solid rgb(var(--fg-base));
+        outline-offset: -2px;
     }
     &:active {
         transform: scale(0.95);

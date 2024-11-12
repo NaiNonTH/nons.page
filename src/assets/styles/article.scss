@@ -42,7 +42,6 @@ figure {
     max-width: fit-content;
     margin: 2.5em auto;
     padding: 1%;
-    box-shadow: var(--box-shadow-md),
 }
 figcaption {
     text-align: center;
@@ -81,9 +80,6 @@ pre {
     header abbr,
     footer {
         display: none;
-    }
-    figure {
-        box-shadow: none;
     }
     html,
     main,

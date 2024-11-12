@@ -29,6 +29,21 @@
         color: rgb(var(--prominence-hyperlinked));
     }
 }
+
+.splash > * {
+    vertical-align: middle;
+}
+
+#random-splash {
+    padding: 0;
+    width: 1.5em;
+    height: 1.5em;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #s-2 {
     min-width: -moz-fit-content;
     min-width: fit-content;
@@ -59,7 +74,7 @@
             background: currentColor;
         }
         &::before {
-            height: 0.0625em;
+            height: 1px;
             width: 1.5em;
         }
         &::after {
@@ -67,7 +82,7 @@
             left: 0;
             bottom: 50%;
             height: 3.25em;
-            width: 0.0625em;
+            width: 1px;
         }
         &:first-child::after {
             height: 1.5em;
