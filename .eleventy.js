@@ -1,19 +1,19 @@
-const sass = require("sass");
+import * as sass from "sass";
 
-const uglifyjs = require("uglify-js");
+import uglifyjs from "uglify-js";
 
-const htmlmin = require("html-minifier");
-const xmlmin = require("xml-formatter");
-const CleanCSS = require("clean-css");
+import htmlmin from "html-minifier";
+import xmlmin from "xml-formatter";
+import CleanCSS from "clean-css";
 
-const mdImplicitFigures = require("markdown-it-image-figures");
-const mdAnchor = require("markdown-it-anchor");
+import mdImplicitFigures from "markdown-it-image-figures";
+import mdAnchor from "markdown-it-anchor";
 
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+import pluginRss from "@11ty/eleventy-plugin-rss";
+import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 
-const { statSync } = require("fs");
-const eleventyAutoCacheBuster = require("eleventy-auto-cache-buster");
+import { statSync } from "fs";
+import eleventyAutoCacheBuster from "eleventy-auto-cache-buster";
 
 function minifyjs(inputContent) {
     const minified = uglifyjs.minify(inputContent, {
@@ -43,7 +43,7 @@ function toDateString(dateFormat) {
     return `${date}${dateSuffix} ${months[dateFormat.getMonth()]}, ${dateFormat.getFullYear()}`;
 }
 
-module.exports = function(config) {
+export default async function(config) {
     const output = (process.env.ELEVENTY_RUN_MODE === "serve") ? "_dev" : "_site";
 
     config.addPlugin(pluginRss);
@@ -167,7 +167,7 @@ module.exports = function(config) {
         };
     });
 
-    config.addPassthroughCopy({ "src/_assets/images": "assets/images" });
+    config.addPassthroughCopy({ "public/images": "assets/images" });
     config.addPassthroughCopy("src/!(_assets)**?/**/**/*.{jpg,webp,svg,png,gif}");
     config.addPassthroughCopy("src/*.{jpg,webp,svg,png,gif}");
 

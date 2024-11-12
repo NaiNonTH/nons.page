@@ -1,5 +1,6 @@
 {
   "name": "personal-site",
+  "type": "module",
   "private": true,
   "scripts": {
     "build": "bunx eleventy && cd _site && bestzip ../site.zip *",
@@ -7,17 +8,17 @@
     "fullserve": "bunx eleventy --serve"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-plugin-rss": "1.2.0",
     "@types/bun": "latest",
     "bestzip": "^2.2.1",
     "clean-css": "^5.3.3",
     "eleventy-auto-cache-buster": "^0.3.0",
     "html-minifier": "^4.0.0",
-    "markdown-it-anchor": "^9.0.1",
+    "markdown-it-anchor": "^9.2.0",
     "markdown-it-image-figures": "^2.1.1",
-    "sass": "^1.77.6",
-    "uglify-js": "^3.18.0",
+    "sass": "^1.80.6",
+    "uglify-js": "^3.19.3",
     "xml-formatter": "^3.6.3"
   },
   "peerDependencies": {
