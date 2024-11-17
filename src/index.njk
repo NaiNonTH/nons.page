@@ -31,40 +31,29 @@ layout: "Main.njk"
         </p>
     </div>
 </section>
-<div class="sections-wrapper">
-    <section id="s-2" aria-labelledby="projects">
-        <h2 id="projects">Projects</h2>
-        <ul>
-            <li><a href="/minecraft/">Minecraft</a></li>
-            <li><a target="_blank" href="https://nainonth.github.io/Bmi-Calc">Bmi-Calc</a></li>
-            <li><a target="_blank" href="https://npmjs.org/sign-lang">Sign</a></li>
-            <li><a target="_blank" href="https://nm.nons.page">NM Project</a></li>
-            <li><a target="_blank" href="https://github.com/NaiNonTH/drug-driver">Drug Driver</a></li>
-        </ul>
-    </section>
-    <section id="s-3" aria-labelledby="latest-post">
-        {% set latestPost = (collections.blog | reverse)[0] %}
-        <h2 id="latest-post">Latest Post</h2>
-        <a class="not-text" href={{ latestPost.url }}>
-            <article>
-                <h3>{{ latestPost.data.title }}</h3>
-                <picture>
-                    <source srcset="{{ latestPost.url + 'thumbnail.webp' }}" type="image/webp">
-                    <img loading="lazy" decoding="async" src="{{ latestPost.url + 'thumbnail.jpg' }}" alt="A Thumbnail for Latest Post: {{ latestPost.data.title }}">
-                </picture>
-            </article>
-        </a>
-    </section>
-</div>
-<div class="sections-wrapper">
-    <section aria-label="NavLink" id="s-6">
-        <iframe title="NavLink Ads" loading="lazy" width="180" height="180" style="border:none" src="https://dimden.neocities.org/navlink/"></iframe>
-    </section>
-    <section aria-label="Guestbook" id="s-7">
-        <h2><a target="_blank" href="https://nainonth.atabook.org">Sign my Guestbook</a></h2>
-        <span>Powered by <a target="_blank" href="https://atabook.org">atabook</a></span>
-    </section>
-</div>
+<section id="s-2" aria-labelledby="projects">
+    <h2 id="projects">Projects</h2>
+    <ul>
+        <li><a href="/minecraft/">Minecraft</a></li>
+        <li><a target="_blank" href="https://nainonth.github.io/Bmi-Calc">Bmi-Calc</a></li>
+        <li><a target="_blank" href="https://npmjs.org/sign-lang">Sign</a></li>
+        <li><a target="_blank" href="https://nm.nons.page">NM Project</a></li>
+        <li><a target="_blank" href="https://github.com/NaiNonTH/drug-driver">Drug Driver</a></li>
+    </ul>
+</section>
+<section id="s-3" aria-labelledby="latest-post">
+    {% set latestPost = (collections.blog | reverse)[0] %}
+    <h2 id="latest-post">Latest Post</h2>
+    <a class="not-text" href={{ latestPost.url }}>
+        <article>
+            <h3>{{ latestPost.data.title }}</h3>
+            <picture>
+                <source srcset="{{ latestPost.url + 'thumbnail.webp' }}" type="image/webp">
+                <img loading="lazy" decoding="async" src="{{ latestPost.url + 'thumbnail.jpg' }}" alt="A Thumbnail for Latest Post: {{ latestPost.data.title }}">
+            </picture>
+        </article>
+    </a>
+</section>
 <section id="s-4" aria-labelledby="recent-update">
     <h2 id="recent-update">Site Update</h2>
     <article>
@@ -75,18 +64,16 @@ layout: "Main.njk"
 </section>
 <section id="s-5" aria-labelledby="buttons">
     <h2 id="buttons">Buttons</h2>
+    <p>Share my site on your website</p>
     <div>
         <a class="not-text" href="/">
             <img width="88" height="31" loading="lazy" decoding="async" src="/button-light.jpg" alt="NaiNonTheN00b1 Button">
         </a>
+        <textarea id="light-button" onfocus="this.select()" rows="1" readonly>&lt;a href="{{ global.baseURL }}"&gt;&lt;img width="88" height="31" loading="lazy" decoding="async" src="{{ 'button-light.jpg' | htmlBaseUrl(global.baseURL) }}" alt="NaiNonTheN00b1 Button"&gt;&lt;/a&gt;</textarea>
         <a class="not-text" href="/">
             <img width="88" height="31" loading="lazy" decoding="async" src="/button-dark.jpg" alt="NaiNonTheN00b1 Button">
         </a>
+        <textarea id="dark-button" onfocus="this.select()" rows="1" readonly>&lt;a href="{{ global.baseURL }}"&gt;&lt;img width="88" height="31" loading="lazy" decoding="async" src="{{ 'button-dark.jpg' | htmlBaseUrl(global.baseURL) }}" alt="NaiNonTheN00b1 Button"&gt;&lt;/a&gt;</textarea>
     </div>
-    <p>Share my site on your website</p>
-    <label for="light-button">Light:</label>
-    <textarea id="light-button" onfocus="this.select()" rows="1" readonly>&lt;a href="{{ global.baseURL }}"&gt;&lt;img width="88" height="31" loading="lazy" decoding="async" src="{{ 'button-light.jpg' | htmlBaseUrl(global.baseURL) }}" alt="NaiNonTheN00b1 Button"&gt;&lt;/a&gt;</textarea>
-    <label for="dark-button">Dark:</label>
-    <textarea id="dark-button" onfocus="this.select()" rows="1" readonly>&lt;a href="{{ global.baseURL }}"&gt;&lt;img width="88" height="31" loading="lazy" decoding="async" src="{{ 'button-dark.jpg' | htmlBaseUrl(global.baseURL) }}" alt="NaiNonTheN00b1 Button"&gt;&lt;/a&gt;</textarea>
-    <p>Alternatively, you can use my <a target="_blank" href="https://nainonth.neocities.org/assets/images/me/button.jpg">Old Neocities button</a></p>
+    <p>Alternatively, you can use my <wbr><a target="_blank" href="https://nainonth.neocities.org/assets/images/me/button.jpg">Old Neocities button</a></p>
 </section>
