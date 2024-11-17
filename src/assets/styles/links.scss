@@ -38,3 +38,17 @@ main > div {
 #s-2 article {
     margin: 1em 0;
 }
+#s-3 {
+    margin: auto;
+    padding: 0;
+
+    max-width: 12em;
+    aspect-ratio: 1 / 1;
+    border-bottom-left-radius: 0;
+
+    iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
