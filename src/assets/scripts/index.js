@@ -1,5 +1,9 @@
 (function() {
-    const splashes = [
+    function inTheRangeOf(value, a, b) {
+        return value >= a && value <= b
+    }
+
+    const casualSplashes = [
         "this website is hosted on <a href='https://nekoweb.org' target='_blank'>the internet for the cats :3</a>",
         "why is our world getting worse?",
         "I hate the minor me.",
@@ -23,14 +27,39 @@
         "I did <a target='_blank' href='https://nm.nons.page'>this</a> for nothing but a tick.",
         "moo-deng.",
     ];
+
+    const christmasSplashes = [
+        "I wish you a Merry X-mas!",
+        "Merry Christmas!",
+        "Feliz Navidad!",
+        "it's that time of the year again, isn't it?",
+        "time flies..."
+    ]
+
+    const newYearSplashes = [
+        "Happy New Year!",
+        "congratulations! You've just survived 2024.",
+        "thank god, I'm still alive at this point...",
+        "it's that time of the year again, isn't it?"
+    ]
     
     const splashOut = document.getElementById("splash");
     const rerandomSplash = document.getElementById("random-splash")
     rerandomSplash.addEventListener("click", randomSplash);
+
+    const date = new Date();
+    let splash;
+    
+    if (inTheRangeOf(date.getDate(), 24, 25) && date.getMonth() === 11)
+        splash = christmasSplashes;
+    else if (inTheRangeOf(date.getDate))
+        splash = newYearSplashes;
+    else
+        splash = casualSplashes;
     
     randomSplash();
     
     function randomSplash() {
-        splashOut.innerHTML = splashes[Math.trunc(Math.random() * splashes.length)];
+        splashOut.innerHTML = splash[Math.trunc(Math.random() * splash.length)];
     }
 })();
