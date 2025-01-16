@@ -2,7 +2,10 @@
 
 :root {
     --box-shadow-md: 0 0.2em 0.7em -0.35em #000;
-    --box-shadow-lg: 0 0.3em 1em -0.65em #000;
+    --box-shadow-lg: 
+        0 0.25em 0.25em #0001,
+        0 0.5em 0.75em #0001,
+        0 0.75em 1em #0001;
 }
 :root,
 html[theme="broken-hoe"] {
