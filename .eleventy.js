@@ -44,7 +44,7 @@ function toDateString(dateFormat) {
 }
 
 export default async function(config) {
-    const output = (process.env.ELEVENTY_RUN_MODE === "serve") ? "_dev" : "_site";
+    const output = (process.env.ELEVENTY_RUN_MODE === "serve") ? "_dev" : "nons.page";
 
     config.addPlugin(pluginRss);
     config.addPlugin(EleventyHtmlBasePlugin);

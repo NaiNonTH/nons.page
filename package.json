@@ -3,7 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "bunx eleventy && cd _site && bestzip ../site.zip *",
+    "build": "bunx eleventy && bestzip site.zip nons.page/*",
     "serve": "bunx eleventy --serve --incremental",
     "fullserve": "bunx eleventy --serve"
   },
