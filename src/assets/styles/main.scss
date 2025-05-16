@@ -88,7 +88,7 @@ body {
         @extend %site-wrapper;
         --avatar-size: 100px;
         margin-top: 2em;
-        min-height: 3.25em;
+        height: 3.5rem;
 
         ul {
             @extend %navigations;
@@ -147,6 +147,8 @@ main {
     display: grid;
     gap: 1.5em;
     grid-template-columns: repeat(12, 1fr);
+    
+    line-height: 1.75;
 }
 footer {
     @extend %site-wrapper;
@@ -245,9 +247,6 @@ main a:not(.btn):not(.not-text) {
     &:hover {
         border-bottom-style: dotted;
     }
-}
-p, ul, ol {
-    line-height: 1.5em;
 }
 code {
     @extend %scheme-dark;
