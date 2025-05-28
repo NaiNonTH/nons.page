@@ -24,7 +24,7 @@
         "the quick brown fox jumps over the lazy dog.",
         "you actually don't need JavaScript for this website.",
         "should I move to Linux?",
-        "I did <a target='_blank' href='https://nm.nons.page'>this</a> for nothing but a tick.",
+        "I did <a target='_blank' href='/blog/two-projects-in-a-month/#numerical-method-webapp-project'>this</a> for nothing but a tick.",
         "moo-deng.",
     ];
 

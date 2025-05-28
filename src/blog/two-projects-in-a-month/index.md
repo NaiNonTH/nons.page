@@ -47,7 +47,7 @@ I also made an API for randomizing equations and connecting to the Database for 
 
 On the 2nd November, 2024, I needed to show my app to my lecturer. Things were going pretty good so far, *until...*
 
-My lecturer stumbled upon the [Simpson's Rule](https://nm.nons.page/integration/simpsons-rule#main) page with no graph. He then questioned me: "How will you know if the answer that you got is correct?" At that time, I already knew that I was genuinely fucked and stayed silent. So he made me delete the entire page and started writing them again while adding the graph output into the page.
+My lecturer stumbled upon the Simpson's Rule page with no graph. He then questioned me: "How will you know if the answer that you got is correct?" At that time, I already knew that I was genuinely fucked and stayed silent. So he made me delete the entire page and started writing them again while adding the graph output into the page.
 
 The thing is, the reason why I didn't implement the graph was because it was a pain to implement, and now I had to do it. I had to write everything on the page from the ground up and add the graph. It was so hard and depressing that I felt my tears literally flow in front of the computer a little.
 
@@ -55,7 +55,9 @@ Four hours passed, and I made it. I rewrote the entire thing and included a real
 
 So all I received was just an "Attempted" tick and a score of pure *zero*.
 
-The app is at [nm.nons.page](https://nm.nons.page) and [here's its source code](https://github.com/NaiNonTH/nm-project).
+~~The app is at nm.nons.page~~ and [here's its source code](https://github.com/NaiNonTH/nm-project).
+
+**Update 29/05/2025: The app has already been taken down. You won't be able to use it.**
 
 ![A screenshot of my Numerical Method web app on the Simpson's rule](./nm.nons.page.png "A screenshot of my web app on the Simpson's Rule page")
 
