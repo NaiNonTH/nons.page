@@ -15,7 +15,7 @@
         "I wish the internet was simpler.",
         "I wish I could experience the 2000's internet.",
         "I am from Thailand.",
-        "<a href='/blog/my-pc-froze-and-couldn-t-turn-back-on/'>this is what happened after I played Minecraft with RTX on.</a>",
+        "<a href='/blog/my-pc-froze-and-couldn-t-turn-back-on/'>this is what would happen if I played Minecraft with RTX on.</a>",
         "THE SITE PREVIEW ACTUALLY WORKS, LET'S GOOO!!!",
         "has the AI trend gone way too far?",
         "this website is built with <a href='https://11ty.dev' target='_blank'>11ty</a>.",
