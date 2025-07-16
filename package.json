@@ -8,7 +8,7 @@
     "fullserve": "bunx eleventy --serve"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.0",
+    "@11ty/eleventy": "^3.1.2",
     "@11ty/eleventy-plugin-rss": "1.2.0",
     "@types/bun": "latest",
     "bestzip": "^2.2.1",
@@ -17,7 +17,7 @@
     "html-minifier": "^4.0.0",
     "markdown-it-anchor": "^9.2.0",
     "markdown-it-image-figures": "^2.1.1",
-    "sass": "^1.89.1",
+    "sass": "^1.89.2",
     "uglify-js": "^3.19.3",
     "xml-formatter": "^3.6.6"
   },
