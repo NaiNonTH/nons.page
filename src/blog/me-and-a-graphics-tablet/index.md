@@ -4,6 +4,7 @@ description: I bought a Graphics Tablet for doing assignments instead of using a
 date: 2025-03-24
 tags:
     - computer
+    - gadgets
 ---
 
 **Update 25/03/2025: I made some grammar corrections and mentioned XP-Pen Star 03 V2 since I was thinking of buying it too.**
