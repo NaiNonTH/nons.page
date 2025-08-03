@@ -171,6 +171,12 @@ export default async function(config) {
     config.addPassthroughCopy("src/!(_assets)**?/**/**/*.{jpg,webp,svg,png,gif}");
     config.addPassthroughCopy("src/*.{jpg,webp,svg,png,gif}");
 
+    config.addPreprocessor("drafts", "*", (data, content) => {
+		if (data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
+			return false;
+		}
+	});
+
     return {
         dir: {
             input: "src",
