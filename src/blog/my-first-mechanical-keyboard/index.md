@@ -11,7 +11,7 @@ In the last 3 days (from <time datetime="2025-07-30">30/07/2025</time> to <time 
 
 ![A photograph of a certain perspective of the KMUTNB IT Fair](./it-fair.jpg "How the IT Fair looks like, taken from [this post on ICIT KMUTNB Facebook Page](https://www.facebook.com/photo/?fbid=781034787787709&set=pb.100076435846629.-2207520000)")
 
-The thing is, I was looking for a new laptop for work so that I can code anywhere and anytime. Also, I don't want to interrupt my brother's sleep time too (#LateKnightCoder lmao). However, nothing stood out to me. I want something that can last for a long time at an affordable price, but I might be putting way too many expectations.
+The thing is, I was looking for a new laptop for work so that I can code anywhere and anytime. Also, I don't want to interrupt my brother's sleep time too (#LateKnightCoder lmao). However, nothing stood out to me. I want something that can last for a long time at an affordable price, but I might be expecting way too much.
 
 ## Tons of Gadgets
 
